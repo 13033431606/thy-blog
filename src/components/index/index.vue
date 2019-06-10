@@ -10,8 +10,12 @@
                 <main>
                     <div class="left">
                         <router-link tag="li" :to="{name:'article_info',params:{id:item.id}}" v-for="(item,index) in articles">
-                            <div class="pic">
-                                <img  src="../../assets/img/banner1.jpg" class="need_cover" alt="">
+                            <div class="pic" v-if="item.img1">
+                                <img :src="uploads_url+'/'+item.img1" class="need_cover" alt="">
+                                <div class="type">vue , css , javascript</div>
+                            </div>
+                            <div class="pic" v-else>
+                                <img src="../../assets/img/banner2.jpg" class="need_cover" alt="">
                                 <div class="type">vue , css , javascript</div>
                             </div>
                             <div class="article">
@@ -40,7 +44,8 @@
     import backround from "../public/background.vue";
     import sidebar from "../public/sidebar.vue";
     import banner from "../index/banner.vue";
-    const get_category=api.get_category;
+    const get_category= api.get_category;//分类获取api
+    const uploads_url= api.uploads_url;//资源路径
     export default {
         name: "home",
         components:{
@@ -48,7 +53,8 @@
         },
         data(){
             return{
-                articles:''
+                articles:'',
+                uploads_url:uploads_url
             }
         },
         mounted(){

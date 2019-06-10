@@ -1,0 +1,365 @@
+@charset "UTF-8";
+/*自写组件部分*/
+main {
+  max-width: 90%;
+  margin: 0 auto;
+  display: block;
+  *zoom: 1; }
+  main:before, main:after {
+    content: " ";
+    display: table; }
+  main:after {
+    clear: both; }
+
+html {
+  background: #fff;
+  overflow-x: hidden;
+  width: 100%; }
+
+.main_page {
+  position: relative;
+  z-index: 20;
+  background: #fff;
+  width: 100%;
+  height: auto; }
+
+/*动画区域*/
+@-webkit-keyframes img_scale {
+  from {
+    transform: scale(1);
+    -ms-transform: scale(1);
+    -moz-transform: scale(1);
+    -webkit-transform: scale(1);
+    -o-transform: scale(1); }
+  to {
+    transform: scale(1.05);
+    -ms-transform: scale(1.05);
+    -moz-transform: scale(1.05);
+    -webkit-transform: scale(1.05);
+    -o-transform: scale(1.05); } }
+@keyframes img_scale {
+  from {
+    transform: scale(1);
+    -ms-transform: scale(1);
+    -moz-transform: scale(1);
+    -webkit-transform: scale(1);
+    -o-transform: scale(1); }
+  to {
+    transform: scale(1.05);
+    -ms-transform: scale(1.05);
+    -moz-transform: scale(1.05);
+    -webkit-transform: scale(1.05);
+    -o-transform: scale(1.05); } }
+@-webkit-keyframes tadass {
+  from {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1); }
+  10%,
+  20% {
+    -webkit-transform: scale3d(0.9, 0.9, 0.9) rotate3d(0, 0, 1, -3deg);
+    transform: scale3d(0.9, 0.9, 0.9) rotate3d(0, 0, 1, -3deg); }
+  30%,
+  50%,
+  70%,
+  90% {
+    -webkit-transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, 3deg);
+    transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, 3deg); }
+  40%,
+  60%,
+  80% {
+    -webkit-transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, -3deg);
+    transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, -3deg); }
+  to {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1); } }
+@keyframes tadass {
+  from {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1); }
+  10%,
+  20% {
+    -webkit-transform: scale3d(0.9, 0.9, 0.9) rotate3d(0, 0, 1, -3deg);
+    transform: scale3d(0.9, 0.9, 0.9) rotate3d(0, 0, 1, -3deg); }
+  30%,
+  50%,
+  70%,
+  90% {
+    -webkit-transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, 3deg);
+    transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, 3deg); }
+  40%,
+  60%,
+  80% {
+    -webkit-transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, -3deg);
+    transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, -3deg); }
+  to {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1); } }
+/*类名*/
+.need_dot .swiper-pagination .swiper-pagination-bullet {
+  width: 12px;
+  height: 12px;
+  position: relative;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  /* Firefox */
+  -webkit-box-sizing: border-box;
+  /* Safari*/
+  background: rgba(0, 0, 0, 0.4);
+  opacity: 1;
+  transition: 0.5s;
+  -moz-transition: 0.5s;
+  -webkit-transition: 0.5s;
+  -o-transition: 0.5s;
+  transition-timing-function: ease;
+  -moz-transition-timing-function: ease;
+  /* Firefox 4 */
+  -webkit-transition-timing-function: ease;
+  /* Safari 和 Chrome */
+  -o-transition-timing-function: ease;
+  /* Opera */
+  -webkit-box-shadow: 0 0 4px 1px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0 4px 1px rgba(0, 0, 0, 0.2); }
+  .need_dot .swiper-pagination .swiper-pagination-bullet:hover:after {
+    transform: scale(2);
+    -ms-transform: scale(2);
+    -moz-transform: scale(2);
+    -webkit-transform: scale(2);
+    -o-transform: scale(2); }
+  .need_dot .swiper-pagination .swiper-pagination-bullet:after {
+    content: '';
+    width: 4px;
+    height: 4px;
+    background: #fff;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    border-radius: 50%;
+    transition: 0.5s;
+    -moz-transition: 0.5s;
+    -webkit-transition: 0.5s;
+    -o-transition: 0.5s;
+    transition-timing-function: ease;
+    -moz-transition-timing-function: ease;
+    /* Firefox 4 */
+    -webkit-transition-timing-function: ease;
+    /* Safari 和 Chrome */
+    -o-transition-timing-function: ease;
+    /* Opera */ }
+.need_dot .swiper-pagination .swiper-pagination-bullet-active {
+  border: 2px solid #fff; }
+  .need_dot .swiper-pagination .swiper-pagination-bullet-active:after {
+    width: 0;
+    height: 0;
+    transform: scale(0);
+    -ms-transform: scale(0);
+    -moz-transform: scale(0);
+    -webkit-transform: scale(0);
+    -o-transform: scale(0); }
+
+.need_dot_small .swiper-pagination .swiper-pagination-bullet {
+  width: 9px;
+  height: 9px;
+  position: relative;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  /* Firefox */
+  -webkit-box-sizing: border-box;
+  /* Safari*/
+  background: rgba(0, 0, 0, 0.4);
+  opacity: 1;
+  transition: 0.5s;
+  -moz-transition: 0.5s;
+  -webkit-transition: 0.5s;
+  -o-transition: 0.5s;
+  transition-timing-function: ease;
+  -moz-transition-timing-function: ease;
+  /* Firefox 4 */
+  -webkit-transition-timing-function: ease;
+  /* Safari 和 Chrome */
+  -o-transition-timing-function: ease;
+  /* Opera */ }
+  .need_dot_small .swiper-pagination .swiper-pagination-bullet:hover:after {
+    transform: scale(2);
+    -ms-transform: scale(2);
+    -moz-transform: scale(2);
+    -webkit-transform: scale(2);
+    -o-transform: scale(2); }
+  .need_dot_small .swiper-pagination .swiper-pagination-bullet:after {
+    content: '';
+    width: 5px;
+    height: 5px;
+    background: #fff;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    border-radius: 50%;
+    transition: 0.5s;
+    -moz-transition: 0.5s;
+    -webkit-transition: 0.5s;
+    -o-transition: 0.5s;
+    transition-timing-function: ease;
+    -moz-transition-timing-function: ease;
+    /* Firefox 4 */
+    -webkit-transition-timing-function: ease;
+    /* Safari 和 Chrome */
+    -o-transition-timing-function: ease;
+    /* Opera */ }
+.need_dot_small .swiper-pagination .swiper-pagination-bullet-active {
+  border: 1px solid #fff; }
+  .need_dot_small .swiper-pagination .swiper-pagination-bullet-active:after {
+    width: 0;
+    height: 0;
+    transform: scale(0);
+    -ms-transform: scale(0);
+    -moz-transform: scale(0);
+    -webkit-transform: scale(0);
+    -o-transform: scale(0); }
+
+.need_cover {
+  -o-object-fit: cover;
+  object-fit: cover;
+  -o-object-position: center;
+  object-position: center;
+  width: 100%;
+  height: 100%; }
+
+.need_contain {
+  -o-object-fit: contain;
+  object-fit: contain;
+  -o-object-position: center;
+  object-position: center;
+  width: 100%;
+  height: 100%; }
+
+.need_img_scale {
+  animation: imgScale 5s ease-in-out infinite alternate;
+  -webkit-animation: imgScale 5s ease-in-out infinite alternate; }
+
+.need_tada {
+  animation: tadass 1s linear infinite;
+  -webkit-animation: tadass 1s linear infinite; }
+
+.need_marquee {
+  white-space: nowrap; }
+
+.need_swiper_button .swiper-button-prev:hover {
+  transform: translateX(-5px);
+  -ms-transform: translateX(-5px);
+  -moz-transform: translateX(-5px);
+  -webkit-transform: translateX(-5px);
+  -o-transform: translateX(-5px); }
+.need_swiper_button .swiper-button-next:hover {
+  transform: translateX(5px);
+  -ms-transform: translateX(5px);
+  -moz-transform: translateX(5px);
+  -webkit-transform: translateX(5px);
+  -o-transform: translateX(5px); }
+.need_swiper_button .swiper-button-disabled {
+  pointer-events: auto !important; }
+.need_swiper_button .swiper-button-white {
+  transition: 0.5s;
+  -moz-transition: 0.5s;
+  -webkit-transition: 0.5s;
+  -o-transition: 0.5s;
+  transition-timing-function: ease;
+  -moz-transition-timing-function: ease;
+  /* Firefox 4 */
+  -webkit-transition-timing-function: ease;
+  /* Safari 和 Chrome */
+  -o-transition-timing-function: ease;
+  /* Opera */
+  border-radius: 3px;
+  background-color: rgba(0, 0, 0, 0.5);
+  -webkit-box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
+  background-size: 15px 25px; }
+
+.need_show {
+  display: block !important; }
+
+.need_hidden {
+  display: none !important; }
+
+.need_scroll {
+  overflow: hidden;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch; }
+
+.need_scroll::-webkit-scrollbar {
+  width: 8px;
+  height: 8px; }
+
+/*正常情况下滑块的样式*/
+.need_scroll::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
+  -webkit-box-shadow: inset 1px 1px 0 rgba(0, 0, 0, 0.1); }
+
+/*鼠标悬浮在该类指向的控件上时滑块的样式*/
+.need_scroll:hover::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 0.4);
+  border-radius: 10px;
+  -webkit-box-shadow: inset 1px 1px 0 rgba(0, 0, 0, 0.1); }
+
+/*鼠标悬浮在滑块上时滑块的样式*/
+.need_scroll::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(0, 0, 0, 0.4);
+  -webkit-box-shadow: inset 1px 1px 0 rgba(0, 0, 0, 0.1); }
+
+/*正常时候的主干部分*/
+.need_scroll::-webkit-scrollbar-track {
+  border-radius: 10px;
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.4);
+  background-color: white; }
+
+/*鼠标悬浮在滚动条上的主干部分*/
+.need_scroll::-webkit-scrollbar-track:hover {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.4);
+  background-color: rgba(0, 0, 0, 0.01); }
+
+.need_scroll_small {
+  overflow: hidden;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch; }
+
+.need_scroll_small::-webkit-scrollbar {
+  width: 4px;
+  height: 4px; }
+
+/*正常情况下滑块的样式*/
+.need_scroll_small::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
+  -webkit-box-shadow: inset 1px 1px 0 rgba(0, 0, 0, 0.1); }
+
+/*鼠标悬浮在该类指向的控件上时滑块的样式*/
+.need_scroll_small:hover::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 0.4);
+  border-radius: 10px;
+  -webkit-box-shadow: inset 1px 1px 0 rgba(0, 0, 0, 0.1); }
+
+/*鼠标悬浮在滑块上时滑块的样式*/
+.need_scroll_small::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(0, 0, 0, 0.4);
+  -webkit-box-shadow: inset 1px 1px 0 rgba(0, 0, 0, 0.1); }
+
+/*正常时候的主干部分*/
+.need_scroll_small::-webkit-scrollbar-track {
+  border-radius: 10px;
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.4);
+  background-color: white; }
+
+/*鼠标悬浮在滚动条上的主干部分*/
+.need_scroll_small::-webkit-scrollbar-track:hover {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.4);
+  background-color: rgba(0, 0, 0, 0.01); }
+
+/*自写组件部分*/
+
+/*# sourceMappingURL=base.css.map */

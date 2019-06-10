@@ -1,0 +1,579 @@
+@charset "utf-8";
+
+// main color
+$color:#FF8C00;
+$color2: #2df9f8;
+$color3: #b0fbfe;
+
+$font: "SF Pro SC", "HanHei SC", "SF Pro Text", "Myriad Set Pro", "PingFang SC", "Helvetica Neue",'microsoft yahei','Microsoft YaHei',SimHei,sans-serif;
+
+
+@mixin linear_gradient($deg:-120deg,$rgba:$color,$rgba2:$color,$degree:20%,$tone:"darken"){
+  @if $tone == darken {
+    background: -webkit-linear-gradient($deg, $rgba, darken($rgba2,$degree));
+    background: -o-linear-gradient($deg, $rgba, darken($rgba2,$degree));
+    background: -moz-linear-gradient($deg, $rgba, darken($rgba2,$degree));
+    background: linear-gradient($deg, $rgba, darken($rgba2,$degree));
+  }
+  @else if $tone == lighten{
+    background: -webkit-linear-gradient($deg, $rgba, lighten($rgba2,$degree));
+    background: -o-linear-gradient($deg, $rgba, lighten($rgba2,$degree));
+    background: -moz-linear-gradient($deg, $rgba, lighten($rgba2,$degree));
+    background: linear-gradient($deg, $rgba, lighten($rgba2,$degree));
+  }
+}
+@mixin mask($deg:0deg,$rgba:rgba(0,0,0,0.9),$rgba2:rgba(0,0,0,0)){
+  background: -webkit-linear-gradient($deg, $rgba, $rgba2);
+  background: -o-linear-gradient($deg, $rgba, $rgba2);
+  background: -moz-linear-gradient($deg, $rgba, $rgba2);
+  background: linear-gradient($deg, $rgba, $rgba2);
+}
+@mixin font($value,$value2){
+  font-family: $font;
+  font-size: $value;
+  color:$value2;
+}
+@mixin horizontal{
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+}
+@mixin vertical{
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin: auto 0;
+}
+@mixin center{
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+@mixin box-shadow($value){
+  -webkit-box-shadow: $value;
+  box-shadow: $value;
+}
+@mixin transition($value:0.2s,$value2:ease){
+  transition: $value;
+  -moz-transition: $value;
+  -webkit-transition: $value;
+  -o-transition: $value;
+  transition-timing-function: $value2;
+  -moz-transition-timing-function: $value2; /* Firefox 4 */
+  -webkit-transition-timing-function: $value2; /* Safari 和 Chrome */
+  -o-transition-timing-function: $value2; /* Opera */
+}
+@mixin transform($value){
+  transform: $value;
+  -ms-transform:$value;
+  -moz-transform: $value;
+  -webkit-transform: $value;
+  -o-transform: $value;
+}
+@mixin Y($value){
+  transform:translateY($value);
+  -ms-transform:translateY($value);
+  -moz-transform:translateY($value);
+  -webkit-transform:translateY($value);
+  -o-transform:translateY($value);
+}
+@mixin X($value){
+  transform:translateX($value);
+  -ms-transform:translateX($value);
+  -moz-transform:translateX($value);
+  -webkit-transform:translateX($value);
+  -o-transform:translateX($value);
+}
+@mixin scale($value){
+  transform:scale($value);
+  -ms-transform:scale($value);
+  -moz-transform:scale($value);
+  -webkit-transform:scale($value);
+  -o-transform:scale($value);
+}
+@mixin rotate($value){
+  transform:rotate($value);
+  -ms-transform:rotate($value);
+  -moz-transform:rotate($value);
+  -webkit-transform:rotate($value);
+  -o-transform:rotate($value);
+}
+@mixin rotate3d($val1:1,$val2:1,$val3:1,$value:360deg){
+  transform:rotate3d($val1, $val2, $val3, $value);
+  -ms-transform:rotate3d($val1, $val2, $val3, $value);
+  -moz-transform:rotate3d($val1, $val2, $val3, $value);
+  -webkit-transform:rotate3d($val1, $val2, $val3, $value);
+  -o-transform:rotate3d($val1, $val2, $val3, $value);
+}
+@mixin animate-way($value2:ease){
+  transition-timing-function: $value2;
+  -moz-transition-timing-function: $value2; /* Firefox 4 */
+  -webkit-transition-timing-function: $value2; /* Safari 和 Chrome */
+  -o-transition-timing-function: $value2; /* Opera */
+}
+@mixin clear{
+  *zoom: 1;
+  &:before, &:after {
+    content: " ";
+    display: table;
+  }
+  &:after {
+    clear: both;
+  }
+}
+@mixin a{
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+@mixin input($value,$value2,$value3:"normal"){
+  input::-webkit-input-placeholder {
+    font-size: $value;
+    color: $value2;
+    font-weight: $value3;
+  }
+  input:-moz-placeholder {
+    font-size: $value;
+    color: $value2;
+    font-weight: $value3;
+  }
+  input::-moz-placeholder {
+    font-size: $value;
+    color: $value2;
+    font-weight: $value3;
+  }
+  input:-ms-input-placeholder {
+    font-size: $value;
+    color: $value2;
+    font-weight: $value3;
+  }
+}
+@mixin textarea($value,$value2,$value3:"normal"){
+  textarea::-webkit-input-placeholder {
+    font-size: $value;
+    color: $value2;
+    font-weight: $value3;
+  }
+  textarea:-moz-placeholder {
+    font-size: $value;
+    color: $value2;
+    font-weight: $value3;
+  }
+  textarea::-moz-placeholder {
+    font-size: $value;
+    color: $value2;
+    font-weight: $value3;
+  }
+  textarea:-ms-input-placeholder {
+    font-size: $value;
+    color: $value2;
+    font-weight: $value3;
+  }
+}
+//三角
+@mixin arrow($direction,$size,$color) {
+  width: 0;
+  height: 0;
+  line-height: 0;
+  font-size: 0;
+  overflow: hidden;
+  border-width: $size;
+  cursor: pointer;
+  @if $direction == top {
+    border-style: dashed dashed solid dashed;
+    border-color: transparent transparent $color transparent;
+    border-top: none;
+  }
+  @else if $direction == bottom {
+    border-style: solid dashed dashed dashed;
+    border-color: $color transparent transparent transparent;
+    border-bottom: none;
+  }
+  @else if $direction == right {
+    border-style: dashed dashed dashed solid;
+    border-color: transparent transparent transparent $color;
+    border-right: none;
+  }
+  @else if $direction == left {
+    border-style: dashed solid dashed dashed;
+    border-color: transparent $color transparent transparent;
+    border-left: none;
+  }
+}
+@mixin fit($value:cover){
+  -o-object-fit: $value;
+  object-fit: $value;
+  -o-object-position: center;
+  object-position: center;
+  width: 100%;
+  height:100%;
+}
+@mixin elli{
+  overflow: hidden;
+  text-overflow:ellipsis;
+  white-space: nowrap;
+}
+@mixin box-sizing($value:border-box){
+  box-sizing:$value;
+  -moz-box-sizing:$value; /* Firefox */
+  -webkit-box-sizing:$value; /* Safari*/
+}
+@mixin button($bac:$color,$direction:left){
+  position: relative;
+  overflow: hidden;
+  &:after{
+    content: '';
+    background: $bac;
+    opacity: 0;
+    @include transition(0.5s);
+    @include a;
+    position: absolute;
+    @if $direction == top {
+      left:0;
+      top: 100%;
+    }
+    @if $direction == right {
+      left: 100%;
+      top: 0;
+    }
+    @if $direction == bottom {
+      left:0;
+      top: -100%;
+    }
+    @if $direction == left {
+      left: -100%;
+      top: 0;
+    }
+  }
+  &:hover{
+    &:after{
+      @if $direction == top {
+        top: 0;
+        opacity: 1;
+      }
+      @if $direction == right {
+        left:0;
+        opacity: 1;
+      }
+      @if $direction == bottom {
+        top: 0;
+        opacity: 1;
+      }
+      @if $direction == left {
+        left: 0;
+        opacity: 1;
+      }
+
+    }
+  }
+}
+@mixin write{
+  -webkit-writing-mode: vertical-rl;
+  -moz-writing-mode: vertical-rl;
+  -o-writing-mode: vertical-rl;
+  -ms-writing-mode: tb-rl;
+  writing-mode: vertical-rl;
+}
+
+
+/*自写组件部分*/
+main
+{
+  max-width: 90%;
+  margin: 0 auto;
+  display: block;
+  @include clear;
+}
+html{
+  background: #fff;
+  overflow-x: hidden;
+  width: 100%;
+}
+.main_page{
+  position: relative;
+  z-index: 20;
+  background: #fff;
+  width: 100%;
+  height: auto;
+}
+/*动画区域*/
+@-webkit-keyframes img_scale{
+  from{
+    @include transform(scale(1))
+  }
+  to{
+    @include transform(scale(1.05))
+  }
+}
+@keyframes img_scale{
+  from{
+    @include transform(scale(1))
+  }
+  to{
+    @include transform(scale(1.05))
+  }
+}
+@-webkit-keyframes tadass {
+  from {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+  }
+
+  10%,
+  20% {
+    -webkit-transform: scale3d(0.9, 0.9, 0.9) rotate3d(0, 0, 1, -3deg);
+    transform: scale3d(0.9, 0.9, 0.9) rotate3d(0, 0, 1, -3deg);
+  }
+
+  30%,
+  50%,
+  70%,
+  90% {
+    -webkit-transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, 3deg);
+    transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, 3deg);
+  }
+
+  40%,
+  60%,
+  80% {
+    -webkit-transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, -3deg);
+    transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, -3deg);
+  }
+
+  to {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+  }
+}
+@keyframes tadass {
+  from {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+  }
+
+  10%,
+  20% {
+    -webkit-transform: scale3d(0.9, 0.9, 0.9) rotate3d(0, 0, 1, -3deg);
+    transform: scale3d(0.9, 0.9, 0.9) rotate3d(0, 0, 1, -3deg);
+  }
+
+  30%,
+  50%,
+  70%,
+  90% {
+    -webkit-transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, 3deg);
+    transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, 3deg);
+  }
+
+  40%,
+  60%,
+  80% {
+    -webkit-transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, -3deg);
+    transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, -3deg);
+  }
+
+  to {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+  }
+}
+/*类名*/
+.need_dot{
+  .swiper-pagination{
+    .swiper-pagination-bullet{
+      width: 12px;
+      height: 12px;
+      position: relative;
+      @include box-sizing();
+      background: rgba(0,0,0,0.4);
+      opacity: 1;
+      @include transition(0.5s);
+      @include box-shadow(0 0 4px 1px rgba(0,0,0,0.2));
+      &:hover{
+        &:after{
+          @include scale(2);
+        }
+      }
+      &:after{
+        content:'';
+        width: 4px;
+        height: 4px;
+        background: #fff;
+        @include center;
+        border-radius: 50%;
+        @include transition(0.5s);
+      }
+    }
+    .swiper-pagination-bullet-active{
+      border: 2px solid #fff;
+      &:after{
+        width: 0;
+        height: 0;
+        @include scale(0);
+      }
+    }
+  }
+}
+.need_dot_small{
+  .swiper-pagination{
+    .swiper-pagination-bullet{
+      width: 9px;
+      height: 9px;
+      position: relative;
+      @include box-sizing();
+      background: rgba(0,0,0,0.4);
+      opacity: 1;
+      @include transition(0.5s);
+      //border-radius: 0;
+      &:hover{
+        &:after{
+          @include scale(2);
+        }
+      }
+      &:after{
+        content:'';
+        width: 5px;
+        height: 5px;
+        background: #fff;
+        @include center;
+        border-radius: 50%;
+        //border-radius: 0;;
+        @include transition(0.5s);
+      }
+    }
+    .swiper-pagination-bullet-active{
+      border: 1px solid #fff;
+      &:after{
+        width: 0;
+        height: 0;
+        @include scale(0);
+      }
+    }
+  }
+}
+.need_cover{
+  @include fit;
+}
+.need_contain{
+  @include fit(contain);
+}
+.need_img_scale{
+  animation: imgScale 5s ease-in-out infinite alternate;
+  -webkit-animation: imgScale 5s ease-in-out infinite alternate;
+}
+.need_tada{
+  animation:tadass 1s linear infinite;
+  -webkit-animation: tadass 1s linear infinite;
+}
+.need_marquee{
+  white-space: nowrap;
+}
+.need_swiper_button{
+  .swiper-button-prev{
+    &:hover{
+      @include X(-5px);
+    }
+  }
+  .swiper-button-next{
+    &:hover{
+      @include X(5px);
+    }
+  }
+  .swiper-button-disabled{
+    pointer-events: auto!important;
+  }
+  .swiper-button-white{
+    @include transition(0.5s);
+    border-radius: 3px;
+    background-color: rgba(0,0,0,0.5);
+    @include box-shadow(0 0 10px 0 rgba(0,0,0,0.3));
+    background-size: 15px 25px;
+  }
+}
+.need_show{
+  display: block!important;
+}
+.need_hidden{
+  display: none!important;
+}
+//滚动条
+.need_scroll{
+  overflow: hidden;
+  overflow-y: auto;
+  -webkit-overflow-scrolling : touch;
+}
+.need_scroll::-webkit-scrollbar {
+  width: 8px;//表示垂直滚动条的宽度
+  height: 8px;//表示水平滚动条的高度
+}
+/*正常情况下滑块的样式*/
+.need_scroll::-webkit-scrollbar-thumb {
+  background-color: rgba(0,0,0,.5);
+  border-radius: 10px;
+  -webkit-box-shadow: inset 1px 1px 0 rgba(0,0,0,.1);
+}
+/*鼠标悬浮在该类指向的控件上时滑块的样式*/
+.need_scroll:hover::-webkit-scrollbar-thumb {
+  background-color: rgba(0,0,0,.4);
+  border-radius: 10px;
+  -webkit-box-shadow: inset 1px 1px 0 rgba(0,0,0,.1);
+}
+/*鼠标悬浮在滑块上时滑块的样式*/
+.need_scroll::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(0,0,0,.4);
+  -webkit-box-shadow: inset 1px 1px 0 rgba(0,0,0,.1);
+}
+/*正常时候的主干部分*/
+.need_scroll::-webkit-scrollbar-track {
+  border-radius: 10px;
+  -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.4);
+  background-color: white;
+}
+/*鼠标悬浮在滚动条上的主干部分*/
+.need_scroll::-webkit-scrollbar-track:hover {
+  -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.4);
+  background-color: rgba(0,0,0,.01);
+}
+.need_scroll_small{
+  overflow: hidden;
+  overflow-y: auto;
+  -webkit-overflow-scrolling : touch;
+}
+.need_scroll_small::-webkit-scrollbar {
+  width: 4px;//表示垂直滚动条的宽度
+  height: 4px;//表示水平滚动条的高度
+}
+/*正常情况下滑块的样式*/
+.need_scroll_small::-webkit-scrollbar-thumb {
+  background-color: rgba(0,0,0,.5);
+  border-radius: 10px;
+  -webkit-box-shadow: inset 1px 1px 0 rgba(0,0,0,.1);
+}
+/*鼠标悬浮在该类指向的控件上时滑块的样式*/
+.need_scroll_small:hover::-webkit-scrollbar-thumb {
+  background-color: rgba(0,0,0,.4);
+  border-radius: 10px;
+  -webkit-box-shadow: inset 1px 1px 0 rgba(0,0,0,.1);
+}
+/*鼠标悬浮在滑块上时滑块的样式*/
+.need_scroll_small::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(0,0,0,.4);
+  -webkit-box-shadow: inset 1px 1px 0 rgba(0,0,0,.1);
+}
+/*正常时候的主干部分*/
+.need_scroll_small::-webkit-scrollbar-track {
+  border-radius: 10px;
+  -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.4);
+  background-color: white;
+}
+/*鼠标悬浮在滚动条上的主干部分*/
+.need_scroll_small::-webkit-scrollbar-track:hover {
+  -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.4);
+  background-color: rgba(0,0,0,.01);
+}
+
+/*自写组件部分*/

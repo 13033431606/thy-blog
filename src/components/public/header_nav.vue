@@ -9,6 +9,9 @@
                 <router-link tag="li" :to="{name:'index'}">
                     Homepage
                 </router-link>
+                <router-link tag="li" :to="{name:'article'}">
+                    Article
+                </router-link>
                 <router-link tag="li" :to="{name:'article_info',params:{id:271}}">
                     Img Library
                 </router-link>
@@ -34,8 +37,9 @@
 </script>
 
 <style scoped lang="scss">
-    .view{
-        margin-top: 100px;
+    .container{
+        width: 100%;
+        display: block;
     }
     .header_nav_on{
         &:after{

@@ -1,5 +1,5 @@
 <template>
-    <div class="article_info">
+    <div class="article_info needScrollSmall">
         <main>
             <div class="title">{{article.title}}</div>
             <div class="content info_content" v-html="article.content"></div>
@@ -71,6 +71,10 @@
             td,th{
                 border: 1px solid #dedede;
             }
+        }
+        img{
+            max-width: 100%;
+            height: auto;
         }
     }
 </style>

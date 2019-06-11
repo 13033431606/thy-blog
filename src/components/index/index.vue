@@ -12,15 +12,15 @@
                         <router-link tag="li" :to="{name:'article_info',params:{id:item.id}}" v-for="(item,index) in articles">
                             <div class="pic" v-if="item.img1">
                                 <img :src="uploads_url+'/'+item.img1" class="need_cover" alt="">
-                                <div class="type">vue , css , javascript</div>
+                                <div class="type" style="display: none">vue , css , javascript</div>
                             </div>
                             <div class="pic" v-else>
                                 <img src="../../assets/img/banner2.jpg" class="need_cover" alt="">
-                                <div class="type">vue , css , javascript</div>
+                                <div class="type" style="display: none">vue , css , javascript</div>
                             </div>
                             <div class="article">
                                 <div class="time">
-                                    <div class="type">Theory</div>
+                                    <div class="type">Time</div>
                                     <div class="line"></div>
                                     <div class="date">{{item.time}}</div>
                                 </div>
@@ -36,6 +36,7 @@
                 </main>
             </div>
         </div>
+
     </div>
 </template>
 
@@ -46,6 +47,8 @@
     import banner from "../index/banner.vue";
     const get_category= api.get_category;//分类获取api
     const uploads_url= api.uploads_url;//资源路径
+    const get_type= api.get_type;//获取分类名称和id
+
     export default {
         name: "home",
         components:{
@@ -54,6 +57,8 @@
         data(){
             return{
                 articles:'',
+                types:'',
+                data:'',
                 uploads_url:uploads_url
             }
         },
@@ -68,7 +73,6 @@
                     params:{id:id}
                 }).then((res)=>{
                     this.articles=res.data.data;
-
                 })
             }
         }

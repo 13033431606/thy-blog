@@ -22,15 +22,9 @@
                         </div>
                     </router-link>
                 </div>
-                <div class="right">
-                    <transition name="fade" mode="out-in">
-                        <router-view :key="this.$route.params.id"></router-view>
-                    </transition>
-                </div>
             </main>
         </div>
     </div>
-
 </template>
 
 <script>
@@ -46,11 +40,14 @@
             return{
                 articles:'',
                 data:'',
-                uploads_url:uploads_url
+                uploads_url:uploads_url,
             }
         },
         mounted(){
             this.get_article(0);
+        },
+        beforeDestroy(){
+            this.$root.mask="mask_on";
         },
         methods:{
             get_article(id=0){
@@ -62,6 +59,10 @@
                     method:"get"
                 }).then((res)=>{
                     this.articles=res.data.data;
+                    var that=this;
+                    setTimeout(function () {
+                        that.$root.mask="mask_off";
+                    },that.$root.delay);
                 })
             }
         }
@@ -166,8 +167,9 @@
             }
         }
         .right{
-            width: 32%;
+            width: 100%;
             float: left;
+            height: 500px;
 
         }
     }

@@ -3,10 +3,7 @@ import VueRouter from 'vue-router';
 import App from "./app.vue";
 import axios from 'axios';
 
-
-
 Vue.prototype.$axios=axios;
-
 
 
 Vue.use(VueRouter);
@@ -19,15 +16,19 @@ const router = new VueRouter({
     routes: [
         {name: "default",path: "",redirect: {name: "index"}},
         {name: "index",path: "/index",component: index},
-        {name: "article",path: "/article", component: article_list,children:[
-            {name: "article_info" ,path: "article_info/:id",components: article_info}
-            ]
-        }
+        {name: "article",path: "/article", component: article_list},
+        {name:"article_info",path: "article_info/:id",component: article_info}
     ]
 });
 
 new Vue({
     el:"#app",
+    data(){
+        return{
+            mask:"mask_on",
+            delay:500
+        }
+    },
     router: router,
     render:h=>h(App)
 })

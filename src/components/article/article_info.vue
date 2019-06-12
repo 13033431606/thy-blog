@@ -86,7 +86,9 @@
     }
     .article_info{
         width: 100%;
-        background: rgba(0,0,0,0.3);
+        position: relative;
+        z-index: 10;
+        padding-top: 100px;
         main{
             max-width:900px;
             position: relative;

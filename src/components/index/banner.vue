@@ -32,7 +32,6 @@
     const count_url=api.get_count;
     const words_api=api.get_words;//毒鸡汤api
 
-
     export default {
         name: "banner.vue",
         data(){
@@ -53,6 +52,10 @@
                     params:{time:tiem_str}
                 }).then((res)=>{
                     this.msg=res.data.data[0];
+                    var that=this;
+                    setTimeout(function () {
+                        that.$root.mask="mask_off";
+                    },that.$root.delay);
                 })
             }
         },
@@ -72,6 +75,9 @@
                 this.count.todo_num=res.data.data;
             });
             this.get_words();
+        },
+        destroyed(){
+            this.$root.mask="mask_on";
         }
     }
 </script>

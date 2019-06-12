@@ -59,7 +59,7 @@
                 })
             }
         },
-        mounted(){
+        created(){
             this.$axios({
                 url:count_url,
                 method:"get",

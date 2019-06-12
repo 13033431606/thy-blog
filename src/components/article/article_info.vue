@@ -12,7 +12,6 @@
 
     import hljs from 'highlight.js';
     import 'highlight.js/styles/railscasts.css'
-
     const highlightCode = () => {
         const preEl = document.querySelectorAll('pre')
 
@@ -29,12 +28,14 @@
                 article:'',
             }
         },
-        mounted(){
+        created(){
             this.get_article_data(this.$route.params.id);
-
         },
         updated () {
             highlightCode()
+        },
+        beforeDestroy(){
+            this.$root.mask="mask_on";
         },
         watch: {
             '$route' (to, from) { //监听路由是否变化
@@ -51,10 +52,11 @@
                     params:{id:id}
                 }).then((res)=>{
                     this.article=res.data.data[0];
+                    var that=this;
+                    setTimeout(function () {
+                        that.$root.mask="mask_off";
+                    },this.$root.delay)
                 })
-            },
-            test(){
-                console.log(1)
             }
         }
     }
@@ -89,6 +91,7 @@
         position: relative;
         z-index: 10;
         padding-top: 100px;
+        padding-bottom: 50px;
         main{
             max-width:900px;
             position: relative;

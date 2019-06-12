@@ -43,7 +43,7 @@
                 uploads_url:uploads_url,
             }
         },
-        mounted(){
+        created(){
             this.get_article(0);
         },
         beforeDestroy(){

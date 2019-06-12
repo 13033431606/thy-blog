@@ -6,13 +6,13 @@
                 <div class="cn">原<span>则</span> - Life is not all roses</div>
             </router-link>
             <div class="nav">
-                <router-link tag="li" :to="{name:'index'}">
+                <router-link tag="li" :to="{name:'index'}" :class="{header_router_active : $route.meta.title == 'index'}">
                     Homepage
                 </router-link>
-                <router-link tag="li" :to="{name:'article'}">
+                <router-link tag="li" :to="{name:'article'}" :class="{header_router_active : $route.meta.title == 'article'}">
                     Article
                 </router-link>
-                <router-link tag="li" :to="{name:'article_info',params:{id:271}}">
+                <router-link tag="li" :to="{name:'article_info',params:{id:271}}" :class="{header_router_active : $route.meta.title == 'library'}">
                     Img Library
                 </router-link>
             </div>
@@ -37,9 +37,9 @@
 </script>
 
 <style scoped lang="scss">
-    .container{
-        width: 100%;
-        display: block;
+    .header_router_active{
+        color: $color!important;
+        text-shadow: 2px 2px 2px rgba(0,0,0,0.2);
     }
     .header_nav_on{
         &:after{
@@ -103,6 +103,7 @@
                     @include transition(0.5s);
                     span{
                         color: $color;
+                        text-shadow: 2px 2px 2px rgba(0,0,0,0.2);
                     }
                 }
                 .cn{
@@ -114,6 +115,7 @@
                     transition-delay: 0.05s;
                     span{
                         color: $color;
+                        text-shadow: 2px 2px 2px rgba(0,0,0,0.2);
                     }
                 }
             }

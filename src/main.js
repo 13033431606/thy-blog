@@ -15,21 +15,29 @@ import article_list from "./components/article/article_list.vue";
 const router = new VueRouter({
     routes: [
         {name: "default",path: "",redirect: {name: "index"}},
-        {name: "index",path: "/index",component: index},
-        {name: "article",path: "/article", component: article_list},
-        {name:"article_info",path: "article_info/:id",component: article_info}
-    ]
+        {name: "index",path: "/index",component: index,meta:{title:"index"}},
+        {name: "article",path: "/article", component: article_list,meta:{title:"article"}},
+        {name:"article_info",path: "/article_info/:id",component: article_info,meta:{title:"article"}}
+    ],
+    scrollBehavior (to, from, savedPosition) {
+        if (savedPosition) {
+            return savedPosition;
+
+        } else {
+            return;
+        }
+    },
 });
 
-new Vue({
+
+const thy=new Vue({
     el:"#app",
     data(){
         return{
             mask:"mask_on",
-            delay:500
+            delay:200
         }
     },
     router: router,
     render:h=>h(App)
 })
-

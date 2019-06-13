@@ -40,7 +40,6 @@
     .header_router_active{
         color: $color!important;
     }
-
     .header_nav{
         width: 100%;
         height: 80px;
@@ -133,7 +132,7 @@
     .header_nav_on{
         &:after{
             @include Y(80px);
-            opacity: 1;
+            opacity: 0;
         }
         &:before{
             width: 100%;

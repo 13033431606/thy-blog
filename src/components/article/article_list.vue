@@ -1,5 +1,12 @@
 <template>
     <div class="article_list">
+        <div class="tips_container">
+            <div class="search">
+                <form>
+                    <input type="text" placeholder="Search...">
+                </form>
+            </div>
+        </div>
         <div class="wrapper">
             <main>
                 <div class="left">
@@ -73,9 +80,27 @@
     .article_list{
         width: 100%;
         height: auto;
-        padding-top: 100px;
         position: relative;
         z-index: 10;
+    }
+    .tips_container{
+        width: 100%;
+        background: #111;
+        height: 190px;
+        .search{
+            width: 100%;
+            height: 45px;
+            padding-top: 110px;
+            form{
+                width: 80%;
+                margin-left: 10%;
+                height: 50px;
+                input{
+                    @include a;
+                    background: #333;
+                }
+            }
+        }
     }
     .wrapper{
         position: relative;

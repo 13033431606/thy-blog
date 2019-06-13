@@ -39,18 +39,8 @@
 <style scoped lang="scss">
     .header_router_active{
         color: $color!important;
-        text-shadow: 2px 2px 2px rgba(0,0,0,0.2);
     }
-    .header_nav_on{
-        &:after{
-            @include Y(80px);
-            opacity: 1!important;
-        }
-        &:before{
-            width: 100%!important;
-            background: rgba($color,0.3)!important;
-        }
-    }
+
     .header_nav{
         width: 100%;
         height: 80px;
@@ -59,6 +49,7 @@
         left: 0;
         z-index: 999;
         @include transition(0.5s);
+        background: rgba(0,0,0,0.7);
         &:after{
             content: '';
             width: 100%;
@@ -68,7 +59,6 @@
             left: 0;
             z-index: 1;
             background: rgba(0,0,0,0.7);
-            opacity: 0;
             @include transition(0.5s);
         }
         &:before{
@@ -103,7 +93,6 @@
                     @include transition(0.5s);
                     span{
                         color: $color;
-                        text-shadow: 2px 2px 2px rgba(0,0,0,0.2);
                     }
                 }
                 .cn{
@@ -115,7 +104,7 @@
                     transition-delay: 0.05s;
                     span{
                         color: $color;
-                        text-shadow: 2px 2px 2px rgba(0,0,0,0.2);
+
                     }
                 }
             }
@@ -141,4 +130,29 @@
 
     }
 
+    .header_nav_on{
+        &:after{
+            @include Y(80px);
+            opacity: 1;
+        }
+        &:before{
+            width: 100%;
+            background: rgba($color,0.3);
+        }
+        main{
+            .logo{
+                .en{
+                    color: #fff;
+                }
+                .cn{
+                    color: #fff;
+                }
+            }
+            .nav{
+                li{
+                    color: #fff;
+                }
+            }
+        }
+    }
 </style>

@@ -1,28 +1,33 @@
 <template>
     <div class="banner">
-        <div class="words">
-            <span>{{msg.data}}</span>
+        <div class="pic">
+
         </div>
-        <div class="search">
-            <input type="text" placeholder="Search...">
-        </div>
-        <div class="count">
-            <li>
-                <div class="title">
-                    Total
-                </div>
-                <div class="num">
-                    {{count.total_num}}
-                </div>
-            </li>
-            <li>
-                <div class="title">
-                    Todo
-                </div>
-                <div class="num">
-                    {{count.todo_num}}
-                </div>
-            </li>
+        <div class="container">
+            <div class="words">
+                <span>{{msg.data}}</span>
+            </div>
+            <div class="search">
+                <input type="text" placeholder="Search...">
+            </div>
+            <div class="count">
+                <li>
+                    <div class="title">
+                        Total
+                    </div>
+                    <div class="num">
+                        {{count.total_num}}
+                    </div>
+                </li>
+                <li>
+                    <div class="title">
+                        Todo
+                    </div>
+                    <div class="num">
+                        {{count.todo_num}}
+                    </div>
+                </li>
+            </div>
         </div>
     </div>
 </template>
@@ -89,68 +94,82 @@
         padding-top: 80px;
         position: relative;
         z-index: 10;
-        .words{
-            @include font(31px,rgba(255,255,255,0.7));
-            font-weight: bold;
-            line-height: 46px;
-            padding-top: 100px;
-            padding-bottom: 100px;
-            width: 50%;
-            margin-left: 5%;
+        .pic{
+            @include a;
+            position: absolute;
+            top: 0;
+            left: 0;
+            background: url("../../assets/img/banner4.jpg") no-repeat center;
+            background-size: cover;
         }
-        .search{
-            width: 90%;
-            margin-left: 5%;
-            max-width: 800px;
-            height: 50px;
-            margin-bottom: 30px;
-            @include input(19px,rgba(255,255,255,0.7),lighter);
-            input{
-                @include a;
-                @include box-sizing();
-                border: 1px solid rgba(255,255,255,0.45);
-                background: rgba(0,0,0,0.42);
-                padding-left: 10px;
-                @include font(19px,rgba(255,255,255,0.7));
-                font-weight: lighter;
-                line-height: 50px;
-                @include transition(0.5s);
-                &:focus{
-                    border-color: $color!important;
-                    background: rgba(0,0,0,0.6);
-                }
+        .container{
+            width: 100%;
+            height: 100%;
+            position: relative;
+            z-index: 10;
+            .words{
+                @include font(31px,rgba(255,255,255,1));
+                font-weight: bold;
+                line-height: 46px;
+                padding-top: 100px;
+                padding-bottom: 100px;
+                width: 50%;
+                margin-left: 5%;
             }
-        }
-        .count{
-            width: 90%;
-            padding-top: 25px;
-            padding-bottom: 25px;
-            margin-left: 5%;
-            border-top: 1px solid rgba(255,255,255,0.3);
-            border-bottom: 1px solid rgba(255,255,255,0.3);
-            @include clear;
-            li{
-                float: left;
-                height: 100%;
-                padding-right: 140px;
-                border-right:1px solid rgba(255,255,255,0.3);
-                &:last-child{
-                    border-right: none;
-                    padding-left: 20px;
-                }
-                .title{
-                    @include font(21px,rgba(255,255,255,0.6));
+            .search{
+                width: 90%;
+                margin-left: 5%;
+                max-width: 800px;
+                height: 50px;
+                margin-bottom: 30px;
+                @include input(19px,rgba(255,255,255,0.7),lighter);
+                input{
+                    @include a;
+                    @include box-sizing();
+                    border: 1px solid rgba(255,255,255,0.45);
+                    background: rgba(0,0,0,0.42);
+                    padding-left: 10px;
+                    @include font(19px,rgba(255,255,255,0.7));
                     font-weight: lighter;
-                    padding-top: 5px;
-                    height: 24px;
+                    line-height: 50px;
+                    @include transition(0.5s);
+                    &:focus{
+                        border-color: $color!important;
+                        background: rgba(0,0,0,0.6);
+                    }
                 }
-                .num{
-                    @include font(34px,rgba(255,255,255,0.7));
-                    height: 40px;
-                    font-weight: bold;
+            }
+            .count{
+                width: 90%;
+                padding-top: 25px;
+                padding-bottom: 25px;
+                margin-left: 5%;
+                border-top: 1px solid rgba(255,255,255,0.3);
+                @include clear;
+                li{
+                    float: left;
+                    height: 100%;
+                    padding-right: 140px;
+                    border-right:1px solid rgba(255,255,255,0.3);
+                    &:last-child{
+                        border-right: none;
+                        padding-left: 20px;
+                    }
+                    .title{
+                        @include font(21px,rgba(255,255,255,0.6));
+                        font-weight: lighter;
+                        padding-top: 5px;
+                        height: 24px;
+                    }
+                    .num{
+                        @include font(34px,rgba(255,255,255,0.7));
+                        height: 40px;
+                        font-weight: bold;
+                    }
                 }
             }
         }
+
     }
 
 </style>

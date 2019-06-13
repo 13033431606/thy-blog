@@ -37,7 +37,6 @@
     import sidebar from "../public/sidebar.vue";
     import banner from "../index/banner.vue";
 
-
     const get_news=api.get_news;
 
     const get_poetry=api.get_poetry;
@@ -90,7 +89,7 @@
         width: 100%;
         height: 300px;
         p{
-            @include font(15px,rgba(255,255,255,0.8));
+            @include font(15px,rgba(0,0,0,0.8));
             line-height: 26px;
         }
     }
@@ -121,14 +120,14 @@
                 .title{
                     width: 100%;
                     line-height: 36px;
-                    @include font(21px,rgba(255,255,255,0.8));
+                    @include font(21px,rgba(0,0,0,0.8));
                     font-weight: bold;
                     padding-top: 6px;
                 }
                 .author{
                     width: 100%;
                     line-height: 28px;
-                    @include font(15px,rgba(255,255,255,0.8));
+                    @include font(15px,rgba(0,0,0,0.8));
                     padding-bottom: 6px;
                 }
             }
@@ -136,14 +135,12 @@
         .right{
             width: 55%;
             float: right;
-            background: rgba(0,0,0,0.5);
             @include box-sizing();
-            padding: 10px;
             li{
                 width: 100%;
                 @include clear;
                 margin-bottom: 24px;
-                border-bottom: 1px solid rgba(255,255,255,0.3);
+                border-bottom: 1px solid rgba(0,0,0,0.3);
                 padding-bottom: 24px;
                 &:last-of-type{
                     margin-bottom: 0;
@@ -151,7 +148,7 @@
                 }
                 .title{
                     width: 100%;
-                    @include font(16px,rgba(255,255,255,0.9));
+                    @include font(16px,rgba(0,0,0,0.9));
                     font-weight: bold;
                     line-height: 24px;
                     padding-bottom: 15px;
@@ -170,14 +167,14 @@
                     float: right;
                     .time{
                         width: 100%;
-                        @include font(12px,rgba(255,255,255,0.8));
+                        @include font(12px,rgba(0,0,0,0.8));
                         line-height: 22px;
                         text-align: right;
                     }
                     .content{
                         width: 100%;
                         line-height: 24px;
-                        @include font(15px,rgba(255,255,255,0.8));
+                        @include font(15px,rgba(0,0,0,0.8));
                         text-indent: 30px;
                     }
                 }

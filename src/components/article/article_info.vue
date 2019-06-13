@@ -19,7 +19,6 @@
             hljs.highlightBlock(el)
         })
     }
-
     const get_article=api.get_article;
     export default {
         name: "article_info",

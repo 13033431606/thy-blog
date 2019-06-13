@@ -94,13 +94,13 @@
                 float: left;
                 @include box-sizing();
                 padding: 10px;
-                background: rgba(0,0,0,0.3);
+                background: rgba(0,0,0,0);
                 border-radius: 3px;
                 margin-bottom: 20px;
                 cursor: pointer;
                 @include transition(0.5s);
                 &:hover{
-                    background: rgba(0,0,0,0.5);
+                    background: rgba(0,0,0,0);
                     @include Y(-5px);
                     @include box-shadow(0 4px 12px 0 rgba(0,0,0,0.3));
                     .pic{
@@ -134,7 +134,7 @@
                     width: 100%;
                     .time{
                         height: 34px;
-                        @include font(14px,#fff);
+                        @include font(14px,#333);
                         line-height: 34px;
                         @include clear;
                         .type{
@@ -146,7 +146,7 @@
                         .line{
                             width: 1px;
                             height: 10px;
-                            background: #fff;
+                            background: #333;
                             margin-top: 12px;
                             float: left;
                             margin-left: 10px;
@@ -158,7 +158,7 @@
                         }
                     }
                     .title{
-                        @include font(17px,#fff);
+                        @include font(17px,#333);
                         height: 48px;
                         overflow: hidden;
                         line-height: 24px;

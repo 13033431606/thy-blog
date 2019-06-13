@@ -14,11 +14,12 @@ module.exports={
     },
     devServer: {
         host:'localhost',
-        port:'7080'
+        port:'7080',
+        inline:true,
+        hot:true
     },
     module: {
         rules: [
-
             //解析css
             {test:/\.css$/, loader:["style-loader","css-loader"]},
             //解析vue后缀文件
@@ -69,7 +70,7 @@ module.exports={
     plugins:[
         new VueLoaderPlugin(),
         //热更新插件
-        new webpack.HotModuleReplacementPlugin()
+        // new webpack.HotModuleReplacementPlugin()
     ],
     // 如果服务器遇到跨域问题，下面是配置代理，解决跨域
     // devServer: { //配置webpack-dev-server -> express服务器的选项

@@ -3,31 +3,43 @@
         <div class="tips_container">
             <div class="search">
                 <form>
-                    <input type="text" placeholder="Search...">
+                    <input type="text" @keyup.enter="article_search" v-model.trim="keywords" placeholder="搜索...">
                 </form>
             </div>
         </div>
         <div class="wrapper">
+            <div class="top">
+                <main>
+                    <li>
+                        <div class="title">总数</div>
+                        <div class="count">{{total_count}}</div>
+                    </li>
+                    <li>
+                        <div class="title">待办事项</div>
+                        <div class="count">{{todo_count}}</div>
+                    </li>
+                </main>
+            </div>
             <main>
                 <div class="left">
-                    <router-link tag="li" :key="item.id" :to="{name:'article_info',params:{id:item.id}}" v-for="(item,index) in articles">
-                        <div class="pic" v-if="item.img1">
-                            <img :src="uploads_url+'/'+item.img1" class="need_cover" alt="">
-                            <div class="type" style="display: none">vue , css , javascript</div>
+                    <div class="category">
+                        分类一
+                    </div>
+                    <li v-for="item in articles">
+                        <div class="pic">
+                            <img :src="item.img1?uploads_url+'/'+item.img1:'../../src/assets/img/banner1.jpg'" :alt="item.title" class="need_cover">
                         </div>
-                        <div class="pic" v-else>
-                            <img src="../../assets/img/banner2.jpg" class="need_cover" alt="">
-                            <div class="type" style="display: none">vue , css , javascript</div>
+                        <div class="word">
+                            <router-link tag="a" :to="{name:'article_info',params:{id:item.id}}">
+                                <div class="title">{{item.title}}</div>
+                            </router-link>
+                            <div class="des">{{item.description}}</div>
+                            <div class="time">{{item.time}}</div>
                         </div>
-                        <div class="article">
-                            <div class="time">
-                                <div class="type">Time</div>
-                                <div class="line"></div>
-                                <div class="date">{{item.time}}</div>
-                            </div>
-                            <div class="title">{{item.title}}</div>
-                        </div>
-                    </router-link>
+                    </li>
+                </div>
+                <div class="right">
+
                 </div>
             </main>
         </div>
@@ -38,6 +50,8 @@
     import api from "../api.vue";
 
     const get_article=api.get_category;
+    const get_count=api.get_count;
+    const article_search=api.article_search;
 
     const uploads_url=api.uploads_url;
 
@@ -48,10 +62,27 @@
                 articles:'',
                 data:'',
                 uploads_url:uploads_url,
+                total_count:"loading...",
+                todo_count:"loading...",
+                keywords:''
             }
         },
         created(){
             this.get_article(0);
+            this.$axios({
+                url:get_count,
+                params:{id:0},
+                method:"get"
+            }).then((res)=>{
+                this.total_count=res.data.data;
+            });
+            this.$axios({
+                url:get_count,
+                params:{id:14},
+                method:"get"
+            }).then((res)=>{
+                this.todo_count=res.data.data;
+            });
         },
         beforeDestroy(){
             this.$root.mask="mask_on";
@@ -71,6 +102,18 @@
                         that.$root.mask="mask_off";
                     },that.$root.delay);
                 })
+            },
+            article_search(){
+                var that=this;
+                if(this.search!=''){
+                    this.$axios({
+                        url:article_search,
+                        params:{keywords:that.keywords},
+                        method:"get"
+                    }).then((res)=>{
+                        this.articles=res.data.data;
+                    })
+                }
             }
         }
     }
@@ -86,7 +129,7 @@
     .tips_container{
         width: 100%;
         background: #111;
-        height: 190px;
+        height: 185px;
         .search{
             width: 100%;
             height: 45px;
@@ -94,108 +137,118 @@
             form{
                 width: 80%;
                 margin-left: 10%;
-                height: 50px;
+                height: 45px;
+                @include input(14px,rgba(255,255,255,0.8));
                 input{
                     @include a;
                     background: #333;
+                    border:none;
+                    @include box-sizing();
+                    padding-left: 15px;
+                    border-radius: 4px;
+                    @include font(14px,#fff);
+
                 }
             }
         }
     }
     .wrapper{
         position: relative;
+        background: #f2f2f2;
+        padding-bottom: 50px;
         z-index: 10;
         width: 100%;
         @include clear;
-        .left{
+        .top{
             width: 100%;
-            float: left;
-            @include box-sizing();
-            display: flex;
-            justify-content: space-between;
-            flex-wrap: wrap;
+            padding: 20px 0;
+            border-bottom: 1px solid #dcdcdc;
+            margin-bottom: 15px;
             li{
-                width: 24%;
                 float: left;
+                border-right: 1px solid #dcdcdc;
+                padding-right: 30px;padding-left: 30px;
+                &:first-child{
+                    padding-left: 0;
+                }
+                .title{
+                    @include font(15px,#333);
+                    padding-bottom: 8px;
+                    height: 16px;
+                }
+                .count{
+                    @include font(40px,#666);
+                    font-weight: bold;
+                }
+            }
+
+        }
+        .left{
+            width: 65%;
+            float: left;
+            background: #fff;
+            @include box-sizing();
+            border: 1px solid #e5e5e5;
+            .category{
+                width: 100%;
                 @include box-sizing();
                 padding: 10px;
-                background: rgba(0,0,0,0);
-                border-radius: 3px;
-                margin-bottom: 20px;
-                cursor: pointer;
+                border-bottom: 1px solid #f2f2f2;
+            }
+            li{
+                width: 100%;
+                @include box-sizing();
+                padding: 20px 15px;
+                border-bottom: 1px solid #f2f2f2;
+                @include clear;
                 @include transition(0.5s);
                 &:hover{
-                    background: rgba(0,0,0,0);
-                    @include Y(-5px);
-                    @include box-shadow(0 4px 12px 0 rgba(0,0,0,0.3));
-                    .pic{
-                        @include scale(0.95);
-                        img{
-                            @include scale(1.12);
-                        }
-                    }
+                    background: rgba(0,0,0,0.03);
                 }
                 .pic{
-                    width: 100%;
-                    height: 200px;
-                    overflow: hidden;
-                    position: relative;
-                    .type{
-                        position: absolute;
-                        right: 0px;
-                        top:0px;
-                        @include font(14px,#fff);
-                        background: $color;
-                        padding: 2px 4px 2px 4px;
-                        border-radius: 3px;
-                    }
-                    @include transition(0.5s);
-                    img{
-                        opacity: 0.9;
-                        @include transition(0.5s);
-                    }
+                    float: left;
+                    width: 50px;
+                    height: 50px;
                 }
-                .article{
-                    width: 100%;
-                    .time{
-                        height: 34px;
-                        @include font(14px,#333);
-                        line-height: 34px;
-                        @include clear;
-                        .type{
-                            float: left;
-                            font-weight: bold;
+                .word{
+                    float: left;
+                    width: calc(100% - 65px);
+                    @include box-sizing();
+                    margin-left: 15px;
+                    .title{
+                        width: 100%;
+                        @include elli;
+                        @include font(15px,#333);
+                        line-height: 25px;
+                        cursor: pointer;
+                        @include transition(0.5s);
+                        &:hover{
                             color: $color;
-                            border-radius: 4px;
-                        }
-                        .line{
-                            width: 1px;
-                            height: 10px;
-                            background: #333;
-                            margin-top: 12px;
-                            float: left;
-                            margin-left: 10px;
-                            margin-right: 10px;
-                        }
-                        .date{
-                            float: left;
-                            font-weight: lighter;
                         }
                     }
-                    .title{
-                        @include font(17px,#333);
-                        height: 48px;
-                        overflow: hidden;
-                        line-height: 24px;
+                    .des{
+                        width: 100%;
+                        @include elli;
+                        height: 25px;
+                        line-height: 25px;
+                        @include font(15px,#8c8c8c);
+                    }
+                    .time{
+                        width: 100%;
+                        text-align: right;
+                        @include font(12px,#8c8c8c);
+                        padding-top: 5px;
                     }
                 }
             }
         }
         .right{
-            width: 100%;
-            float: left;
+            width: 33%;
+            float: right;
+            background: #fff;
+            @include box-sizing();
+            border: 1px solid #e5e5e5;
             height: 500px;
-
         }
     }
 </style>

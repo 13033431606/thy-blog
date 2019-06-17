@@ -84,6 +84,9 @@
         @include font(17px,rgba(255,255,255,0.9));
         letter-spacing: 0.5px;
         line-height: 28px;
+        img{
+            max-width: 100%;
+        }
     }
     .article_info{
         width: 100%;
@@ -91,6 +94,7 @@
         z-index: 10;
         padding-top: 100px;
         padding-bottom: 50px;
+        background: #f2f2f2;
         main{
             max-width:900px;
             position: relative;

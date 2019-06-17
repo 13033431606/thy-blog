@@ -11,6 +11,8 @@
 
     const get_type= base_url+"/public/api/getType";//获取分类对应的id和名称
 
+    const article_search= base_url+"/public/api/article_search";//获取搜索的内容{keywords:keywords}
+
     const get_words= base_url+"/public/api/words";//获取每日毒鸡汤文{time:time}2019-9-9
 
     //第三方
@@ -19,6 +21,6 @@
     const get_poetry = "https://api.apiopen.top/recommendPoetry";//诗句api
 
     export default {
-        get_category,get_article,get_count,get_words,uploads_url,get_type,get_news,get_poetry
+        get_category,get_article,get_count,get_words,uploads_url,get_type,get_news,get_poetry,article_search
     }
 </script>

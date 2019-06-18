@@ -9,6 +9,8 @@
 
     const get_count= base_url+"/public/api/count";//获单个过多个分类下的文章的数量{id:id}
 
+    const get_typetree= base_url+"/public/api/getTree";//获单个过多个分类下的文章的数量{id:id}
+
     const get_type= base_url+"/public/api/getType";//获取分类对应的id和名称
 
     const article_search= base_url+"/public/api/article_search";//获取搜索的内容{keywords:keywords}
@@ -21,6 +23,6 @@
     const get_poetry = "https://api.apiopen.top/recommendPoetry";//诗句api
 
     export default {
-        get_category,get_article,get_count,get_words,uploads_url,get_type,get_news,get_poetry,article_search
+        get_category,get_article,get_count,get_words,uploads_url,get_type,get_news,get_poetry,article_search,get_typetree
     }
 </script>

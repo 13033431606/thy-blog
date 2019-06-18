@@ -2,15 +2,31 @@ import Vue from 'vue';
 import VueRouter from 'vue-router';
 import App from "./app.vue";
 import axios from 'axios';
+import './assets/css/reset.css';
+
+//饿了么ui
+import {
+    Pagination,
+    Select,
+    Option,
+    OptionGroup,
+} from 'element-ui';
+import 'element-ui/lib/theme-chalk/index.css';
+import './assets/css/element.scss'
+Vue.use(Pagination);
+Vue.use(Select);
+Vue.use(Option);
+Vue.use(OptionGroup);
+
 
 Vue.prototype.$axios=axios;
 
 
 Vue.use(VueRouter);
+
 import index from "./components/index/index.vue";
 import article_info from "./components/article/article_info.vue";
 import article_list from "./components/article/article_list.vue";
-
 
 const router = new VueRouter({
     routes: [
@@ -28,6 +44,7 @@ const router = new VueRouter({
         }
     },
 });
+
 
 
 const thy=new Vue({

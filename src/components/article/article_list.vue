@@ -22,24 +22,38 @@
             </div>
             <main>
                 <div class="left">
-                    <div class="wrapper">
-                        <div class="category">
-                            分类一
-                        </div>
-                        <li v-for="item in articles">
-                            <div class="pic">
-                                <img :src="item.img1?uploads_url+'/'+item.img1:'../../src/assets/img/banner1.jpg'" :alt="item.title" class="need_cover">
-                            </div>
-                            <div class="word">
-                                <router-link tag="a" :to="{name:'article_info',params:{id:item.id}}">
-                                    <div class="title">{{item.title}}</div>
-                                </router-link>
-                                <div class="des">{{item.description}}</div>
-                                <div class="time">{{item.time}}</div>
-                            </div>
-                        </li>
+                    <div class="category">
+                        <el-select v-model="value" clearable placeholder="前端">
+                            <el-option
+                                    v-for="item in types"
+                                    :key="item.id"
+                                    :label="item.name"
+                                    :value="item.id">
+                            </el-option>
+                        </el-select>
                     </div>
-                    <div class="page"></div>
+                    <li v-for="item in articles.data">
+                        <div class="pic">
+                            <img :src="item.img1?uploads_url+'/'+item.img1:'../../src/assets/img/banner1.jpg'" :alt="item.title" class="need_cover">
+                        </div>
+                        <div class="word">
+                            <router-link tag="a" :to="{name:'article_info',params:{id:item.id}}">
+                                <div class="title">{{item.title}}</div>
+                            </router-link>
+                            <div class="des">{{item.description}}</div>
+                            <div class="time">{{item.time}}</div>
+                        </div>
+                    </li>
+                    <div class="page">
+                        <el-pagination
+                                background
+                                @current-change="get_article()"
+                                :current-page.sync="current_page"
+                                :page-size="page_size"
+                                layout="prev, pager, next, jumper"
+                                :total="articles.count">
+                        </el-pagination>
+                    </div>
                 </div>
                 <div class="right">
 
@@ -55,23 +69,28 @@
     const get_article=api.get_category;
     const get_count=api.get_count;
     const article_search=api.article_search;
-
     const uploads_url=api.uploads_url;
+    const get_type=api.get_type;
+
 
     export default {
         name: "article_list",
         data(){
             return{
-                articles:'',
-                data:'',
-                uploads_url:uploads_url,
+                articles:'',//文章数据集
+                uploads_url:uploads_url,//用来添加图片路径的前缀
                 total_count:"loading...",
                 todo_count:"loading...",
-                keywords:''
+                keywords:'',//搜索关键词
+                current_page:1,//当前页码
+                page_size:6,//单页文章个数
+                types:"",
+                value:"",
             }
         },
         created(){
             this.get_article(0);
+            this.get_type(15);
             this.$axios({
                 url:get_count,
                 params:{id:0},
@@ -91,7 +110,7 @@
             this.$root.mask="mask_on";
         },
         methods:{
-            get_article(id=0,page=1,num=6){
+            get_article(id=0,page=this.current_page,num=this.page_size){
                 this.$axios({
                     url:get_article,
                     params:{
@@ -101,13 +120,25 @@
                     },
                     method:"get"
                 }).then((res)=>{
-                    this.articles=res.data.data;
+                    this.articles=res.data;
                     var that=this;
                     setTimeout(function () {
                         that.$root.mask="mask_off";
                     },that.$root.delay);
                 })
             },
+            get_type(id){
+                this.$axios({
+                    url:get_type,
+                    params:{
+                        id:id,
+                    },
+                    method:"get"
+                }).then((res)=>{
+                    this.types=res.data;
+                })
+            },
+            //搜索方法
             article_search(){
                 var that=this;
                 if(this.search!=''){
@@ -116,9 +147,17 @@
                         params:{keywords:that.keywords},
                         method:"get"
                     }).then((res)=>{
-                        this.articles=res.data.data;
+                        this.articles=res.data;
                     })
                 }
+            },
+            //element组件相关
+            current_page_change(val) {
+                this.current_page=val;
+                this.get_article();
+            },
+            change(val){
+                console.log(val)
             }
         }
     }
@@ -193,70 +232,71 @@
             width: 65%;
             float: left;
             @include box-sizing();
-            .wrapper{
+            border: 1px solid #dcdcdc;
+            .category{
                 width: 100%;
-                border: 1px solid #dcdcdc;
-                .category{
-                    width: 100%;
-                    @include box-sizing();
-                    padding: 10px;
-                    background: #fff;
-                    border-bottom: 1px solid #f2f2f2;
+                @include box-sizing();
+                padding: 10px;
+                background: #fff;
+                border-bottom: 1px solid #dcdcdc;
+            }
+            li{
+                width: 100%;
+                @include box-sizing();
+                padding: 20px 15px;
+                border-bottom: 1px solid #f2f2f2;
+                @include clear;
+                @include transition(0.5s);
+                background: #fff;
+                &:hover{
+                    background: rgba(0,0,0,0.03);
                 }
-                li{
-                    width: 100%;
+                &:last-of-type{
+                    border-bottom: none;
+                }
+                .pic{
+                    float: left;
+                    width: 50px;
+                    height: 50px;
+                }
+                .word{
+                    float: left;
+                    width: calc(100% - 65px);
                     @include box-sizing();
-                    padding: 20px 15px;
-                    border-bottom: 1px solid #f2f2f2;
-                    @include clear;
-                    @include transition(0.5s);
-                    background: #fff;
-                    &:hover{
-                        background: rgba(0,0,0,0.03);
+                    margin-left: 15px;
+                    .title{
+                        width: 100%;
+                        @include elli;
+                        @include font(15px,#333);
+                        line-height: 25px;
+                        cursor: pointer;
+                        @include transition(0.5s);
+                        &:hover{
+                            color: $color;
+                        }
                     }
-                    .pic{
-                        float: left;
-                        width: 50px;
-                        height: 50px;
+                    .des{
+                        width: 100%;
+                        @include elli;
+                        height: 25px;
+                        line-height: 25px;
+                        @include font(15px,#8c8c8c);
                     }
-                    .word{
-                        float: left;
-                        width: calc(100% - 65px);
-                        @include box-sizing();
-                        margin-left: 15px;
-                        .title{
-                            width: 100%;
-                            @include elli;
-                            @include font(15px,#333);
-                            line-height: 25px;
-                            cursor: pointer;
-                            @include transition(0.5s);
-                            &:hover{
-                                color: $color;
-                            }
-                        }
-                        .des{
-                            width: 100%;
-                            @include elli;
-                            height: 25px;
-                            line-height: 25px;
-                            @include font(15px,#8c8c8c);
-                        }
-                        .time{
-                            width: 100%;
-                            text-align: right;
-                            @include font(12px,#8c8c8c);
-                            padding-top: 5px;
-                        }
+                    .time{
+                        width: 100%;
+                        text-align: right;
+                        @include font(12px,#8c8c8c);
+                        padding-top: 5px;
                     }
                 }
             }
             .page{
                 width: 100%;
-                height: 50px;
-                margin-top: 20px;
+                padding-top: 15px;
+                padding-bottom: 15px;
                 background: #fff;
-                border: 1px solid #dcdcdc;
+
+                text-align: center;
             }
         }
 

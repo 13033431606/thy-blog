@@ -20,6 +20,7 @@
         left: 0;
         z-index: 90;
         @include transition(0.8s);
+        display: none;
         .mask_inner{
             @include a;
             background: $color;

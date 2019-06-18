@@ -7,7 +7,7 @@
                 </form>
             </div>
         </div>
-        <div class="wrapper">
+        <div class="container">
             <div class="top">
                 <main>
                     <li>
@@ -22,21 +22,24 @@
             </div>
             <main>
                 <div class="left">
-                    <div class="category">
-                        分类一
+                    <div class="wrapper">
+                        <div class="category">
+                            分类一
+                        </div>
+                        <li v-for="item in articles">
+                            <div class="pic">
+                                <img :src="item.img1?uploads_url+'/'+item.img1:'../../src/assets/img/banner1.jpg'" :alt="item.title" class="need_cover">
+                            </div>
+                            <div class="word">
+                                <router-link tag="a" :to="{name:'article_info',params:{id:item.id}}">
+                                    <div class="title">{{item.title}}</div>
+                                </router-link>
+                                <div class="des">{{item.description}}</div>
+                                <div class="time">{{item.time}}</div>
+                            </div>
+                        </li>
                     </div>
-                    <li v-for="item in articles">
-                        <div class="pic">
-                            <img :src="item.img1?uploads_url+'/'+item.img1:'../../src/assets/img/banner1.jpg'" :alt="item.title" class="need_cover">
-                        </div>
-                        <div class="word">
-                            <router-link tag="a" :to="{name:'article_info',params:{id:item.id}}">
-                                <div class="title">{{item.title}}</div>
-                            </router-link>
-                            <div class="des">{{item.description}}</div>
-                            <div class="time">{{item.time}}</div>
-                        </div>
-                    </li>
+                    <div class="page"></div>
                 </div>
                 <div class="right">
 
@@ -88,11 +91,13 @@
             this.$root.mask="mask_on";
         },
         methods:{
-            get_article(id=0){
+            get_article(id=0,page=1,num=6){
                 this.$axios({
                     url:get_article,
                     params:{
-                        id:id
+                        id:id,
+                        page:page,
+                        num:num
                     },
                     method:"get"
                 }).then((res)=>{
@@ -152,7 +157,7 @@
             }
         }
     }
-    .wrapper{
+    .container{
         position: relative;
         background: #f2f2f2;
         padding-bottom: 50px;
@@ -164,6 +169,7 @@
             padding: 20px 0;
             border-bottom: 1px solid #dcdcdc;
             margin-bottom: 15px;
+            background: #fff;
             li{
                 float: left;
                 border-right: 1px solid #dcdcdc;
@@ -186,68 +192,80 @@
         .left{
             width: 65%;
             float: left;
-            background: #fff;
             @include box-sizing();
-            border: 1px solid #e5e5e5;
-            .category{
+            .wrapper{
                 width: 100%;
-                @include box-sizing();
-                padding: 10px;
-                border-bottom: 1px solid #f2f2f2;
-            }
-            li{
-                width: 100%;
-                @include box-sizing();
-                padding: 20px 15px;
-                border-bottom: 1px solid #f2f2f2;
-                @include clear;
-                @include transition(0.5s);
-                &:hover{
-                    background: rgba(0,0,0,0.03);
-                }
-                .pic{
-                    float: left;
-                    width: 50px;
-                    height: 50px;
-                }
-                .word{
-                    float: left;
-                    width: calc(100% - 65px);
+                border: 1px solid #dcdcdc;
+                .category{
+                    width: 100%;
                     @include box-sizing();
-                    margin-left: 15px;
-                    .title{
-                        width: 100%;
-                        @include elli;
-                        @include font(15px,#333);
-                        line-height: 25px;
-                        cursor: pointer;
-                        @include transition(0.5s);
-                        &:hover{
-                            color: $color;
+                    padding: 10px;
+                    background: #fff;
+                    border-bottom: 1px solid #f2f2f2;
+                }
+                li{
+                    width: 100%;
+                    @include box-sizing();
+                    padding: 20px 15px;
+                    border-bottom: 1px solid #f2f2f2;
+                    @include clear;
+                    @include transition(0.5s);
+                    background: #fff;
+                    &:hover{
+                        background: rgba(0,0,0,0.03);
+                    }
+                    .pic{
+                        float: left;
+                        width: 50px;
+                        height: 50px;
+                    }
+                    .word{
+                        float: left;
+                        width: calc(100% - 65px);
+                        @include box-sizing();
+                        margin-left: 15px;
+                        .title{
+                            width: 100%;
+                            @include elli;
+                            @include font(15px,#333);
+                            line-height: 25px;
+                            cursor: pointer;
+                            @include transition(0.5s);
+                            &:hover{
+                                color: $color;
+                            }
+                        }
+                        .des{
+                            width: 100%;
+                            @include elli;
+                            height: 25px;
+                            line-height: 25px;
+                            @include font(15px,#8c8c8c);
+                        }
+                        .time{
+                            width: 100%;
+                            text-align: right;
+                            @include font(12px,#8c8c8c);
+                            padding-top: 5px;
                         }
                     }
-                    .des{
-                        width: 100%;
-                        @include elli;
-                        height: 25px;
-                        line-height: 25px;
-                        @include font(15px,#8c8c8c);
-                    }
-                    .time{
-                        width: 100%;
-                        text-align: right;
-                        @include font(12px,#8c8c8c);
-                        padding-top: 5px;
-                    }
                 }
             }
+            .page{
+                width: 100%;
+                height: 50px;
+                margin-top: 20px;
+                background: #fff;
+                border: 1px solid #dcdcdc;
+            }
         }
+
         .right{
             width: 33%;
             float: right;
             background: #fff;
             @include box-sizing();
-            border: 1px solid #e5e5e5;
+            border: 1px solid #dcdcdc;
             height: 500px;
         }
     }

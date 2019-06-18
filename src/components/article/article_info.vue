@@ -14,7 +14,6 @@
     import 'highlight.js/styles/railscasts.css'
     const highlightCode = () => {
         const preEl = document.querySelectorAll('pre')
-
         preEl.forEach((el) => {
             hljs.highlightBlock(el)
         })

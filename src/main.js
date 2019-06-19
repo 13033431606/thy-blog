@@ -10,6 +10,7 @@ import {
     Select,
     Option,
     OptionGroup,
+    Cascader
 } from 'element-ui';
 import 'element-ui/lib/theme-chalk/index.css';
 import './assets/css/element.scss'
@@ -17,6 +18,7 @@ Vue.use(Pagination);
 Vue.use(Select);
 Vue.use(Option);
 Vue.use(OptionGroup);
+Vue.use(Cascader);
 
 
 Vue.prototype.$axios=axios;
@@ -26,14 +28,14 @@ Vue.use(VueRouter);
 
 import index from "./components/index/index.vue";
 import article_info from "./components/article/article_info.vue";
-import article_list from "./components/article/article_list.vue";
+import article_index from "./components/article/article_index.vue";
 
 const router = new VueRouter({
     routes: [
         {name: "default",path: "",redirect: {name: "index"}},
         {name: "index",path: "/index",component: index,meta:{title:"index"}},
-        {name: "article",path: "/article", component: article_list,meta:{title:"article"}},
-        {name:"article_info",path: "/article_info/:id",component: article_info,meta:{title:"article"}}
+        {name: "article",path: "/article", component: article_index,meta:{title: "article"}},
+        {name: "article_info",path: "/article_info/:id",component: article_info,meta:{title:"article"}}
     ],
     scrollBehavior (to, from, savedPosition) {
         if (savedPosition) {

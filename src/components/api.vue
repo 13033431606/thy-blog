@@ -9,11 +9,12 @@
 
     const get_count= base_url+"/public/api/count";//获单个过多个分类下的文章的数量{id:id}
 
-    const get_typetree= base_url+"/public/api/getTree";//获单个过多个分类下的文章的数量{id:id}
+    const get_typetree= base_url+"/public/api/getTypeTree";//获单个过多个分类下的文章的数量{id:id}
 
     const get_type= base_url+"/public/api/getType";//获取分类对应的id和名称
 
     const article_search= base_url+"/public/api/article_search";//获取搜索的内容{keywords:keywords}
+
 
     const get_words= base_url+"/public/api/words";//获取每日毒鸡汤文{time:time}2019-9-9
 

@@ -6,15 +6,15 @@
                 <div class="cn">原<span>则</span> - Life is not all roses</div>
             </router-link>
             <div class="nav">
-                <router-link tag="li" :to="{name:'index'}" :class="{header_router_active : $route.meta.title == 'index'}">
-                    Homepage
-                </router-link>
                 <router-link tag="li" :to="{name:'article'}" :class="{header_router_active : $route.meta.title == 'article'}">
                     Article
                 </router-link>
-                <router-link tag="li" :to="{name:'article_info',params:{id:271}}" :class="{header_router_active : $route.meta.title == 'library'}">
-                    Img Library
+                <router-link tag="li" :to="{name:'index'}" :class="{header_router_active : $route.meta.title == 'index'}">
+                    Demo
                 </router-link>
+                <!--<router-link tag="li" :to="{name:'article_info',params:{id:271}}" :class="{header_router_active : $route.meta.title == 'library'}">-->
+                    <!--Img Library-->
+                <!--</router-link>-->
             </div>
         </main>
     </div>

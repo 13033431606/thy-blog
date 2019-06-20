@@ -13,7 +13,10 @@
         </div>
         <li v-for="item in articles.data">
             <div class="pic">
-                <img :src="item.img1?uploads_url+'/'+item.img1:'../../src/assets/img/banner1.jpg'" :alt="item.title" class="need_cover">
+                <!--使用三元判断会造成vue-loader误判为绝对路径而不进行解析,固采用v-if,else的方法-->
+                <!--<img :src="item.img1?uploads_url+'/'+item.img1:'../../assets/img/banner1.jpg'" :alt="item.title" class="need_cover">-->
+                <img v-if="item.img1" :src="uploads_url+'/'+item.img1" :alt="item.title" class="need_cover">
+                <img v-else src="../../assets/img/banner1.jpg" :alt="item.title" class="need_cover">
             </div>
             <div class="word">
                 <router-link tag="a" :to="{name:'article_info',params:{id:item.id}}">

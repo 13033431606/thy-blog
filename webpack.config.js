@@ -1,10 +1,11 @@
 const path=require("path");
 const webpack=require("webpack");
 const VueLoaderPlugin = require('vue-loader/lib/plugin');
+const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
 
 module.exports={
     //模式
-    mode:"development",
+    mode:"production",
     //入口文件
     entry:__dirname+"/src/main.js",
     output:{
@@ -26,11 +27,6 @@ module.exports={
             {test:/\.vue$/, loader: "vue-loader"},
             //用巴babel解析js文件 排除模块安装目录的文件
             {test:/\.js$/, loader: "babel-loader",exclude: /node_modules/},
-            //解析字体
-            {
-                test: /\.(eot|svg|ttf|woff|woff2)(\?\S*)?$/,
-                loader: 'file-loader'
-            },
             //解析scss
             {
                 test: /\.scss$/,
@@ -40,7 +36,7 @@ module.exports={
                     { loader: 'sass-loader', options: { sourceMap: true } },
                     { loader: 'sass-resources-loader',
                         options: {
-                            sourceMap: true,
+                            sourceMap: false,
                             resources: './src/assets/css/base.scss'
                         }
                     }
@@ -48,19 +44,19 @@ module.exports={
             },
             //图片解析
             {
-                test: /\.(jpg|jpeg|png|gif|svg|webp)$/,
+                test: /\.(jpg|jpeg|png|gif|svg|webp|eot|svg|ttf|woff|woff2)$/,
                 use: [
                     {
                         loader: 'url-loader',
                         options: {
-                            limit: 1024 * 100, // 小于100kb --> url --> base64编码
+                            limit: 1024 * 100, // 小于500kb --> url --> base64编码
                             // 这里如果只写一个文件名,那么图片将打包到  entry.output.path 路径下,也就是 dist/name.ext
                             // name: '[name].[ext]',// 大于100KB 把 url(xx) 替换成 ../images/[name].[ext]
                             // 如果,这里写的名字包含路径,那么也是相对于 entry.ouput.path 路径
                             // 同时这个名字将会作为生成的css中url中的图片地址.
                             name:"[name]-[hash:5].min.[ext]", // -> 存储路径是 dist/images/name.ext
-                            publicPath: "static/img",
-                            outputPath: "static/img"
+                            publicPath: "static/resources",
+                            outputPath: "static/resources"
                         }
                     },
                 ]
@@ -68,8 +64,8 @@ module.exports={
         ]
     },
     plugins:[
-        new VueLoaderPlugin(),
-        //热更新插件
+        new VueLoaderPlugin(),//热更新插件
+        new BundleAnalyzerPlugin()
         // new webpack.HotModuleReplacementPlugin()
     ],
     // 如果服务器遇到跨域问题，下面是配置代理，解决跨域

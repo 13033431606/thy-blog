@@ -1,5 +1,5 @@
 <script>
-    const base_url= "http://thy-cms.tt";//目标域名
+    const base_url= "http://cms.thy-blog.com";//目标域名
 
     const uploads_url= base_url+"/public/uploads";//资源目录
 

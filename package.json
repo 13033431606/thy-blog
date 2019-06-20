@@ -17,7 +17,7 @@
     "babel-plugin-component": "^1.1.1",
     "clean-webpack-plugin": "^2.0.2",
     "css-loader": "^2.1.1",
-    "file-loader": "^3.0.1",
+    "file-loader": "^4.0.0",
     "html-webpack-plugin": "^3.2.0",
     "node-sass": "^4.12.0",
     "sass-loader": "^7.1.0",
@@ -28,13 +28,14 @@
     "vue-style-loader": "^4.1.2",
     "vue-template-compiler": "^2.6.10",
     "webpack": "^4.32.2",
+    "webpack-bundle-analyzer": "^3.3.2",
     "webpack-cli": "^3.3.2",
     "webpack-dev-server": "^3.4.1"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "webpack-dev-server",
-    "build": "webpack"
+    "build": "webpack -p"
   },
   "author": "thy",
   "license": "ISC"

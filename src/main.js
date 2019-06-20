@@ -12,6 +12,7 @@ import {
     OptionGroup,
     Cascader
 } from 'element-ui';
+
 import 'element-ui/lib/theme-chalk/index.css';
 import './assets/css/element.scss'
 Vue.use(Pagination);
@@ -32,7 +33,7 @@ import article_index from "./components/article/article_index.vue";
 
 const router = new VueRouter({
     routes: [
-        {name: "default",path: "",redirect: {name: "index"}},
+        {name: "default",path: "",redirect: {name: "article"}},
         {name: "index",path: "/index",component: index,meta:{title:"index"}},
         {name: "article",path: "/article", component: article_index,meta:{title: "article"}},
         {name: "article_info",path: "/article_info/:id",component: article_info,meta:{title:"article"}}

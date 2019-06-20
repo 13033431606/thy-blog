@@ -99,7 +99,7 @@
             position: absolute;
             top: 0;
             left: 0;
-            background: url("../../assets/img/banner4.jpg") no-repeat center;
+            background: url("../../assets/img/banner1.jpg") no-repeat center;
             background-size: cover;
         }
         .container{

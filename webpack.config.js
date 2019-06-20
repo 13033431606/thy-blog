@@ -5,7 +5,7 @@ const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPl
 
 module.exports={
     //模式
-    mode:"production",
+    mode:"development",
     //入口文件
     entry:__dirname+"/src/main.js",
     output:{

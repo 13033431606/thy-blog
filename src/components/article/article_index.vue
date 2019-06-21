@@ -125,7 +125,7 @@
             background: #fff;
             @include box-sizing();
             border: 1px solid #dcdcdc;
-            height: 500px;
+            height: auto;
         }
     }
 </style>

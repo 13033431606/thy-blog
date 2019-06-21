@@ -9,7 +9,6 @@
 
 <script>
     import api from "../api.vue";
-
     //高亮
     import hljs from 'highlight.js';
     import 'highlight.js/styles/railscasts.css'

@@ -1,7 +1,7 @@
 <template>
     <div class="header_nav">
         <main>
-            <router-link tag="div" class="logo" :to="{name:'index'}">
+            <router-link tag="div" class="logo" :to="{name:'article'}">
                 <div class="en">T<span>h</span>eory</div>
                 <div class="cn">原<span>则</span> - Life is not all roses</div>
             </router-link>

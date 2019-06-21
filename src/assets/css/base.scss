@@ -5,9 +5,10 @@ $color:#FF8C00;
 $color2: #005af9;
 $color3: #b0fbfe;
 
+//默认字体
 $font: "SF Pro SC", "HanHei SC", "SF Pro Text", "Myriad Set Pro", "PingFang SC", "Helvetica Neue",'microsoft yahei','Microsoft YaHei',SimHei,sans-serif;
 
-
+//线性渐变(角度,起始色,终止色,深度,darken|lighten);
 @mixin linear_gradient($deg:-120deg,$rgba:$color,$rgba2:$color,$degree:20%,$tone:"darken"){
   @if $tone == darken {
     background: -webkit-linear-gradient($deg, $rgba, darken($rgba2,$degree));
@@ -22,29 +23,27 @@ $font: "SF Pro SC", "HanHei SC", "SF Pro Text", "Myriad Set Pro", "PingFang SC",
     background: linear-gradient($deg, $rgba, lighten($rgba2,$degree));
   }
 }
-@mixin mask($deg:0deg,$rgba:rgba(0,0,0,0.9),$rgba2:rgba(0,0,0,0)){
-  background: -webkit-linear-gradient($deg, $rgba, $rgba2);
-  background: -o-linear-gradient($deg, $rgba, $rgba2);
-  background: -moz-linear-gradient($deg, $rgba, $rgba2);
-  background: linear-gradient($deg, $rgba, $rgba2);
-}
+//设置字体尺寸,颜色(size,color);
 @mixin font($value,$value2){
   font-family: $font;
   font-size: $value;
   color:$value2;
 }
+//水平居中
 @mixin horizontal{
   position: absolute;
   left: 0;
   right: 0;
   margin: 0 auto;
 }
+//垂直居中
 @mixin vertical{
   position: absolute;
   top: 0;
   bottom: 0;
   margin: auto 0;
 }
+//居中
 @mixin center{
   position: absolute;
   top: 0;
@@ -53,10 +52,12 @@ $font: "SF Pro SC", "HanHei SC", "SF Pro Text", "Myriad Set Pro", "PingFang SC",
   right: 0;
   margin: auto;
 }
+//阴影
 @mixin box-shadow($value){
   -webkit-box-shadow: $value;
   box-shadow: $value;
 }
+//过渡(时间,动画方式)
 @mixin transition($value:0.2s,$value2:ease){
   transition: $value;
   -moz-transition: $value;
@@ -67,6 +68,7 @@ $font: "SF Pro SC", "HanHei SC", "SF Pro Text", "Myriad Set Pro", "PingFang SC",
   -webkit-transition-timing-function: $value2; /* Safari 和 Chrome */
   -o-transition-timing-function: $value2; /* Opera */
 }
+//transform
 @mixin transform($value){
   transform: $value;
   -ms-transform:$value;
@@ -109,12 +111,14 @@ $font: "SF Pro SC", "HanHei SC", "SF Pro Text", "Myriad Set Pro", "PingFang SC",
   -webkit-transform:rotate3d($val1, $val2, $val3, $value);
   -o-transform:rotate3d($val1, $val2, $val3, $value);
 }
+//动画方式
 @mixin animate-way($value2:ease){
   transition-timing-function: $value2;
   -moz-transition-timing-function: $value2; /* Firefox 4 */
   -webkit-transition-timing-function: $value2; /* Safari 和 Chrome */
   -o-transition-timing-function: $value2; /* Opera */
 }
+//清除浮动引发的bug
 @mixin clear{
   *zoom: 1;
   &:before, &:after {
@@ -125,6 +129,7 @@ $font: "SF Pro SC", "HanHei SC", "SF Pro Text", "Myriad Set Pro", "PingFang SC",
     clear: both;
   }
 }
+//宽高,disblock
 @mixin a{
   width: 100%;
   height: 100%;
@@ -212,6 +217,7 @@ $font: "SF Pro SC", "HanHei SC", "SF Pro Text", "Myriad Set Pro", "PingFang SC",
   width: 100%;
   height:100%;
 }
+//超出内容省略号
 @mixin elli{
   overflow: hidden;
   text-overflow:ellipsis;
@@ -222,6 +228,7 @@ $font: "SF Pro SC", "HanHei SC", "SF Pro Text", "Myriad Set Pro", "PingFang SC",
   -moz-box-sizing:$value; /* Firefox */
   -webkit-box-sizing:$value; /* Safari*/
 }
+//平移动画,兄弟元素需加zindex
 @mixin button($bac:$color,$direction:left){
   position: relative;
   overflow: hidden;
@@ -271,6 +278,7 @@ $font: "SF Pro SC", "HanHei SC", "SF Pro Text", "Myriad Set Pro", "PingFang SC",
     }
   }
 }
+//文字排列方式
 @mixin write{
   -webkit-writing-mode: vertical-rl;
   -moz-writing-mode: vertical-rl;
@@ -278,7 +286,6 @@ $font: "SF Pro SC", "HanHei SC", "SF Pro Text", "Myriad Set Pro", "PingFang SC",
   -ms-writing-mode: tb-rl;
   writing-mode: vertical-rl;
 }
-
 
 /*自写组件部分*/
 main

@@ -2,10 +2,10 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/../test2/.idea/test2.iml" filepath="$PROJECT_DIR$/../test2/.idea/test2.iml" />
       <module fileurl="file://$PROJECT_DIR$/../thy-cms/.idea/thinkphp5.iml" filepath="$PROJECT_DIR$/../thy-cms/.idea/thinkphp5.iml" />
       <module fileurl="file://$PROJECT_DIR$/../thycms/.idea/thinkphp5.iml" filepath="$PROJECT_DIR$/../thycms/.idea/thinkphp5.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/thy-blog.iml" filepath="$PROJECT_DIR$/.idea/thy-blog.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../thy-react/.idea/thy-react.iml" filepath="$PROJECT_DIR$/../thy-react/.idea/thy-react.iml" />
       <module fileurl="file://$PROJECT_DIR$/../xshb/.idea/通用基板.iml" filepath="$PROJECT_DIR$/../xshb/.idea/通用基板.iml" />
     </modules>
   </component>

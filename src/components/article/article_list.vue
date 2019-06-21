@@ -11,7 +11,10 @@
                     :props="default_params">
             </el-cascader>
         </div>
-        <li v-for="item in articles.data">
+        <div class="no_data" v-show="!articles.data || articles.data.length == 0">
+            暂无文章信息
+        </div>
+        <li v-for="item in articles.data" v-loading="loading">
             <div class="pic">
                 <!--使用三元判断会造成vue-loader误判为绝对路径而不进行解析,固采用v-if,else的方法-->
                 <!--<img :src="item.img1?uploads_url+'/'+item.img1:'../../assets/img/banner1.jpg'" :alt="item.title" class="need_cover">-->
@@ -55,9 +58,10 @@
                 count:Number(localStorage.count)?Number(localStorage.count):0,//当前文章数量
                 value:localStorage.value?localStorage.value.split(',').map(Number):'',//select选项框值
                 //
-                page_size:6,//单页文章个数
+                page_size:7,//单页文章个数
                 uploads_url:uploads_url,
                 types:[],//分类树
+                loading:true,
                 default_params: {
                     label: 'name',
                     value: 'id',
@@ -89,6 +93,7 @@
                     this.articles=res.data;
                     this.count=res.data.count;
                     localStorage.count=res.data.count;
+                    this.loading=false;
                     var that=this;
                     setTimeout(function () {
                         that.$root.mask="mask_off";
@@ -109,10 +114,12 @@
             },
             //element组件相关
             current_page_change() { //页码变化
+                this.loading=true;
                 localStorage.current_page=this.current_page;
                 this.get_article(this.value,this.current_page,this.page_size);
             },
             select_change(){//下拉变化
+                this.loading=true;
                 localStorage.current_page=this.current_page=1;//下拉选择后重置页面页码
                 localStorage.value=this.value;
                 this.get_article(this.value,this.current_page,this.page_size)
@@ -138,6 +145,14 @@
             background: #fff;
             border-bottom: 1px solid #dcdcdc;
         }
+        .no_data{
+            width: 100%;
+            height: 80px;
+            line-height: 80px;
+            text-align: center;
+            @include font(15px,#333);
+            background: #fff;
+        }
         li{
             width: 100%;
             @include box-sizing();
@@ -148,9 +163,6 @@
             background: #fff;
             &:hover{
                 background: rgba(0,0,0,0.03);
-            }
-            &:last-of-type{
-                border-bottom: none;
             }
             .pic{
                 float: left;

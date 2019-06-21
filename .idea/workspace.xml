@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="828e7984-9433-4a99-9cac-5d984ff5575b" name="Default" comment="">
+<<<<<<< HEAD
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/webpack.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/webpack.config.js" afterDir="false" />
@@ -10,6 +11,14 @@
       <change beforePath="$PROJECT_DIR$/../thy-cms/runtime/temp/1c4e4e56842a3282ce7aa835693b46f6.php" beforeDir="false" afterPath="$PROJECT_DIR$/../thy-cms/runtime/temp/1c4e4e56842a3282ce7aa835693b46f6.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../thy-cms/runtime/temp/4277c6ba1a898fef0475b43346c48b95.php" beforeDir="false" afterPath="$PROJECT_DIR$/../thy-cms/runtime/temp/4277c6ba1a898fef0475b43346c48b95.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../thy-cms/runtime/temp/833e0f801f9016cd84c1828e11cf1845.php" beforeDir="false" afterPath="$PROJECT_DIR$/../thy-cms/runtime/temp/833e0f801f9016cd84c1828e11cf1845.php" afterDir="false" />
+=======
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/src/assets/css/base.scss" afterPath="$PROJECT_DIR$/src/assets/css/base.scss" />
+      <change beforePath="$PROJECT_DIR$/../thy-cms/application/index/view/public/tinymce.html" afterPath="$PROJECT_DIR$/../thy-cms/application/index/view/public/tinymce.html" />
+      <change beforePath="$PROJECT_DIR$/../thy-cms/runtime/temp/1bb801d317ce25c4e717400496de5637.php" afterPath="$PROJECT_DIR$/../thy-cms/runtime/temp/1bb801d317ce25c4e717400496de5637.php" />
+      <change beforePath="$PROJECT_DIR$/../thy-cms/runtime/temp/b64156e53079257cb2444d4ba05f0c63.php" afterPath="$PROJECT_DIR$/../thy-cms/runtime/temp/b64156e53079257cb2444d4ba05f0c63.php" />
+      <change beforePath="$PROJECT_DIR$/../thy-cms/runtime/temp/b9d465437b456f78bd6c0bd3c014e4a2.php" afterPath="$PROJECT_DIR$/../thy-cms/runtime/temp/b9d465437b456f78bd6c0bd3c014e4a2.php" />
+>>>>>>> 1e53cfb0eef179dac29b363cb650a34bb8811e65
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -20,11 +29,32 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+<<<<<<< HEAD
       <file leaf-file-name="load_mask.vue" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/components/public/load_mask.vue">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="556">
               <caret line="37" column="5" selection-start-line="37" selection-start-column="5" selection-end-line="37" selection-end-column="5" />
+=======
+      <file leaf-file-name="article_index.vue" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/components/article/article_index.vue">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1005">
+              <caret line="127" column="25" lean-forward="false" selection-start-line="127" selection-start-column="25" selection-end-line="127" selection-end-column="25" />
+              <folding>
+                <element signature="e#920#949#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="article_sidebar.vue" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/components/article/article_sidebar.vue">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="195">
+              <caret line="51" column="28" lean-forward="false" selection-start-line="51" selection-start-column="28" selection-end-line="51" selection-end-column="28" />
+              <folding />
+>>>>>>> 1e53cfb0eef179dac29b363cb650a34bb8811e65
             </state>
           </provider>
         </entry>
@@ -32,12 +62,23 @@
       <file leaf-file-name="webpack.config.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/webpack.config.js">
           <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
             <state relative-caret-position="119">
               <caret line="7" column="21" selection-start-line="7" selection-start-column="21" selection-end-line="7" selection-end-column="21" />
+=======
+            <state relative-caret-position="735">
+              <caret line="185" column="21" lean-forward="true" selection-start-line="182" selection-start-column="20" selection-end-line="185" selection-end-column="21" />
+              <folding>
+                <element signature="e#5170#5344#0" expanded="false" />
+                <element signature="e#5361#5554#0" expanded="false" />
+                <element signature="e#7003#7166#0" expanded="false" />
+              </folding>
+>>>>>>> 1e53cfb0eef179dac29b363cb650a34bb8811e65
             </state>
           </provider>
         </entry>
       </file>
+<<<<<<< HEAD
       <file leaf-file-name="article_list.vue" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/components/article/article_list.vue">
           <provider selected="true" editor-type-id="text-editor">
@@ -46,11 +87,33 @@
               <folding>
                 <element signature="n#div#1;n#div#0;n#template#0;n#!!top" />
                 <element signature="e#4893#5067#0" />
+=======
+      <file leaf-file-name="webpack.dev.config.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/webpack.dev.config.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="105">
+              <caret line="7" column="44" lean-forward="false" selection-start-line="7" selection-start-column="44" selection-end-line="7" selection-end-column="44" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="main.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="345">
+              <caret line="23" column="15" lean-forward="false" selection-start-line="23" selection-start-column="15" selection-end-line="23" selection-end-column="15" />
+              <folding>
+                <element signature="e#0#22#0" expanded="true" />
+                <element signature="e#157#269#0" expanded="true" />
+                <element signature="e#520#569#0" expanded="true" />
+>>>>>>> 1e53cfb0eef179dac29b363cb650a34bb8811e65
               </folding>
             </state>
           </provider>
         </entry>
       </file>
+<<<<<<< HEAD
       <file leaf-file-name="article_index.vue" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/components/article/article_index.vue">
           <provider selected="true" editor-type-id="text-editor">
@@ -59,19 +122,36 @@
               <folding>
                 <element signature="e#920#949#0" expanded="true" />
               </folding>
+=======
+      <file leaf-file-name="package.json" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/package.json">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="555">
+              <caret line="37" column="45" lean-forward="false" selection-start-line="37" selection-start-column="45" selection-end-line="37" selection-end-column="45" />
+              <folding />
+>>>>>>> 1e53cfb0eef179dac29b363cb650a34bb8811e65
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/index.html">
+      <file leaf-file-name="api.vue" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/components/api.vue">
           <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
             <state relative-caret-position="119">
               <caret line="7" selection-start-line="7" selection-end-line="7" />
+=======
+            <state relative-caret-position="15">
+              <caret line="1" column="32" lean-forward="true" selection-start-line="1" selection-start-column="32" selection-end-line="1" selection-end-column="32" />
+              <folding>
+                <marker date="1561106575217" expanded="true" signature="974:980" ph="{&quot;get_category&quot;: get_category...}" />
+              </folding>
+>>>>>>> 1e53cfb0eef179dac29b363cb650a34bb8811e65
             </state>
           </provider>
         </entry>
       </file>
+<<<<<<< HEAD
       <file leaf-file-name="main.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main.js">
           <provider selected="true" editor-type-id="text-editor">
@@ -81,25 +161,78 @@
                 <element signature="e#0#22#0" expanded="true" />
                 <element signature="e#157#256#0" expanded="true" />
                 <element signature="e#489#538#0" expanded="true" />
+=======
+      <file leaf-file-name="article_info.vue" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/components/article/article_info.vue">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="150">
+              <caret line="10" column="33" lean-forward="false" selection-start-line="10" selection-start-column="33" selection-end-line="10" selection-end-column="33" />
+              <folding>
+                <element signature="e#302#334#0" expanded="true" />
+>>>>>>> 1e53cfb0eef179dac29b363cb650a34bb8811e65
               </folding>
             </state>
           </provider>
         </entry>
       </file>
+<<<<<<< HEAD
       <file leaf-file-name="app.vue" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/app.vue">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="68">
               <caret line="4" column="31" selection-start-line="4" selection-start-column="31" selection-end-line="4" selection-end-column="31" />
+=======
+      <file leaf-file-name="load_mask.vue" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/components/public/load_mask.vue">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="690">
+              <caret line="46" column="33" lean-forward="false" selection-start-line="46" selection-start-column="33" selection-end-line="46" selection-end-column="33" />
+              <folding />
+>>>>>>> 1e53cfb0eef179dac29b363cb650a34bb8811e65
             </state>
           </provider>
         </entry>
       </file>
+<<<<<<< HEAD
       <file leaf-file-name="package.json" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/package.json">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="450">
               <caret line="30" column="28" selection-start-line="30" selection-start-column="5" selection-end-line="30" selection-end-column="28" />
+=======
+      <file leaf-file-name="base.scss" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/assets/css/base.scss">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="406">
+              <caret line="291" column="0" lean-forward="true" selection-start-line="291" selection-start-column="0" selection-end-line="291" selection-end-column="0" />
+              <folding>
+                <element signature="e#367#1027#0" expanded="false" />
+                <element signature="e#1168#1234#0" expanded="false" />
+                <element signature="e#1257#1323#0" expanded="false" />
+                <element signature="e#1342#1429#0" expanded="false" />
+                <element signature="e#1460#1515#0" expanded="false" />
+                <element signature="e#1573#1902#0" expanded="false" />
+                <element signature="e#1939#2066#0" expanded="false" />
+                <element signature="e#2083#2266#0" expanded="false" />
+                <element signature="e#2283#2466#0" expanded="false" />
+                <element signature="e#2487#2645#0" expanded="false" />
+                <element signature="e#2667#2830#0" expanded="false" />
+                <element signature="e#2885#3163#0" expanded="false" />
+                <element signature="e#3203#3428#0" expanded="false" />
+                <element signature="e#3454#3566#0" expanded="false" />
+                <element signature="e#3589#3641#0" expanded="false" />
+                <element signature="e#3687#4106#0" expanded="false" />
+                <element signature="e#4155#4586#0" expanded="false" />
+                <element signature="e#4630#5421#0" expanded="false" />
+                <element signature="e#5446#5583#0" expanded="false" />
+                <element signature="e#5605#5677#0" expanded="false" />
+                <element signature="e#5714#5819#0" expanded="false" />
+                <element signature="e#5882#6676#0" expanded="false" />
+                <element signature="e#6698#6860#0" expanded="false" />
+                <element signature="e#6958#7018#0" expanded="false" />
+                <element signature="e#7040#7076#0" expanded="false" />
+              </folding>
+>>>>>>> 1e53cfb0eef179dac29b363cb650a34bb8811e65
             </state>
           </provider>
         </entry>
@@ -131,7 +264,10 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
+<<<<<<< HEAD
         <option value="$PROJECT_DIR$/../thycms/binduyan.txt" />
+=======
+>>>>>>> 1e53cfb0eef179dac29b363cb650a34bb8811e65
         <option value="$PROJECT_DIR$/../thycms/word.php" />
         <option value="$PROJECT_DIR$/../thycms/application/index/controller/Api.php" />
         <option value="$USER_HOME$/Documents/文件/head.html" />
@@ -158,30 +294,44 @@
         <option value="$PROJECT_DIR$/src/components/public/background.vue" />
         <option value="$PROJECT_DIR$/src/components/index/index.vue" />
         <option value="$USER_HOME$/Desktop/index.html" />
-        <option value="$PROJECT_DIR$/src/assets/css/base.scss" />
         <option value="$USER_HOME$/Documents/index.html" />
         <option value="$USER_HOME$/Documents/head.html" />
-        <option value="$PROJECT_DIR$/src/components/article/article_sidebar.vue" />
-        <option value="$PROJECT_DIR$/src/components/article/article_index.vue" />
         <option value="E:/baidu_hi/product_info.html" />
         <option value="$PROJECT_DIR$/src/components/article/article_search.vue" />
         <option value="$USER_HOME$/Documents/IndexController.class.php" />
         <option value="$PROJECT_DIR$/../thy-cms/application/index/controller/Api.php" />
         <option value="$PROJECT_DIR$/src/components/public/header_nav.vue" />
+<<<<<<< HEAD
         <option value="$PROJECT_DIR$/src/components/api.vue" />
+=======
+>>>>>>> 1e53cfb0eef179dac29b363cb650a34bb8811e65
         <option value="$PROJECT_DIR$/src/components/index/banner.vue" />
-        <option value="$PROJECT_DIR$/src/components/article/article_list.vue" />
         <option value="F:/wechat/常州同捷机电有限公司/pages/index/index.js" />
         <option value="F:/wechat/常州同捷机电有限公司/pages/company/index.js" />
-        <option value="$PROJECT_DIR$/src/main.js" />
         <option value="$USER_HOME$/Desktop/新建文本文档.js" />
+        <option value="$PROJECT_DIR$/../thy-cms/application/index/view/public/tinymce.html" />
         <option value="$PROJECT_DIR$/src/components/article/article_info.vue" />
+<<<<<<< HEAD
         <option value="$PROJECT_DIR$/../thy-cms/application/index/view/public/tinymce.html" />
         <option value="$PROJECT_DIR$/package.json" />
         <option value="$PROJECT_DIR$/../thy-cms/application/index/view/article/index.html" />
         <option value="$PROJECT_DIR$/webpack.config.js" />
         <option value="$PROJECT_DIR$/public/index.html" />
         <option value="$PROJECT_DIR$/src/components/public/load_mask.vue" />
+=======
+        <option value="$PROJECT_DIR$/webpack.config.js" />
+        <option value="$PROJECT_DIR$/public/index.html" />
+        <option value="$PROJECT_DIR$/package.json" />
+        <option value="$PROJECT_DIR$/webpack.pro.config.js" />
+        <option value="$PROJECT_DIR$/webpack.dev.config.js" />
+        <option value="$PROJECT_DIR$/src/components/api.vue" />
+        <option value="$PROJECT_DIR$/src/main.js" />
+        <option value="$PROJECT_DIR$/src/components/article/article_index.vue" />
+        <option value="$PROJECT_DIR$/src/components/article/article_list.vue" />
+        <option value="$PROJECT_DIR$/src/components/article/article_sidebar.vue" />
+        <option value="$PROJECT_DIR$/src/components/public/load_mask.vue" />
+        <option value="$PROJECT_DIR$/src/assets/css/base.scss" />
+>>>>>>> 1e53cfb0eef179dac29b363cb650a34bb8811e65
       </list>
     </option>
   </component>
@@ -210,7 +360,9 @@
     <option name="width" value="1320" />
     <option name="height" value="989" />
   </component>
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
@@ -221,6 +373,7 @@
           <expand>
             <path>
               <item name="thy-blog" type="b2602c69:ProjectViewProjectNode" />
+<<<<<<< HEAD
               <item name="thy-blog" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -245,34 +398,48 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="components" type="462c0819:PsiDirectoryNode" />
               <item name="public" type="462c0819:PsiDirectoryNode" />
+=======
+              <item name="thy-blog" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="thy-blog" type="b2602c69:ProjectViewProjectNode" />
+              <item name="thy-blog" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="public" type="2a2b976b:PhpTreeStructureProvider$1" />
+>>>>>>> 1e53cfb0eef179dac29b363cb650a34bb8811e65
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+<<<<<<< HEAD
+=======
+      <pane id="Scratches" />
+>>>>>>> 1e53cfb0eef179dac29b363cb650a34bb8811e65
       <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../lygld" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="web-ide.project.structure" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\WWW\thycms" />
-      <recent name="D:\phpStudy\PHPTutorial\WWW\thy-blog\src\components\public" />
-      <recent name="D:\phpStudy\PHPTutorial\WWW\thy-blog\src\components\index" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\WWW\thy-blog" />
       <recent name="D:\WWW\thy-blog\src\assets\img" />
       <recent name="D:\thy\thy-blog\src\components\test" />
       <recent name="D:\thy\thy-blog\src\components\article" />
       <recent name="D:\thy\thy-blog\public" />
-      <recent name="D:\thy\thy-blog\public\tinymce" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\WWW\thy-blog\src\components" />
+      <recent name="D:\WWW\thy-blog\src\components\index" />
+      <recent name="D:\WWW\thycms" />
+      <recent name="D:\phpStudy\PHPTutorial\WWW\thy-blog\src\components\public" />
+      <recent name="D:\phpStudy\PHPTutorial\WWW\thy-blog\src\components\index" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -317,12 +484,17 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
+<<<<<<< HEAD
     <option name="totallyTimeSpent" value="166743000" />
+=======
+    <option name="totallyTimeSpent" value="171691000" />
+>>>>>>> 1e53cfb0eef179dac29b363cb650a34bb8811e65
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
+<<<<<<< HEAD
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.51492536" side_tool="true" weight="0.21086957" />
       <window_info anchor="bottom" id="Database Changes" show_stripe_button="false" />
@@ -343,6 +515,39 @@
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Find" order="1" />
+=======
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.29051173" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.21086957" sideWeight="0.51492536" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32934782" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21086957" sideWeight="0.48507464" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.21086957" sideWeight="0.51492536" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32934782" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21086957" sideWeight="0.48507464" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.28411514" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
+>>>>>>> 1e53cfb0eef179dac29b363cb650a34bb8811e65
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -393,6 +598,7 @@
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/src/assets/css/base.scss">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
@@ -400,6 +606,8 @@
         </state>
       </provider>
     </entry>
+=======
+>>>>>>> 1e53cfb0eef179dac29b363cb650a34bb8811e65
     <entry file="file://$PROJECT_DIR$/../thy-cms/application/index/controller/Thy.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="595">
@@ -416,6 +624,7 @@
     </entry>
     <entry file="file://$USER_HOME$/Documents/index.html" />
     <entry file="file://$USER_HOME$/Documents/head.html" />
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/src/components/article/article_sidebar.vue">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="15">
@@ -424,6 +633,23 @@
       </provider>
     </entry>
     <entry file="file://E:/baidu_hi/product_info.html" />
+=======
+    <entry file="file://$PROJECT_DIR$/src/app.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="31" lean-forward="false" selection-start-line="4" selection-start-column="31" selection-end-line="4" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://E:/baidu_hi/product_info.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="541">
+          <caret line="201" column="25" lean-forward="true" selection-start-line="195" selection-start-column="19" selection-end-line="201" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+>>>>>>> 1e53cfb0eef179dac29b363cb650a34bb8811e65
     <entry file="file://$USER_HOME$/Documents/IndexController.class.php" />
     <entry file="file://$PROJECT_DIR$/src/components/article/article_search.vue">
       <provider selected="true" editor-type-id="text-editor">
@@ -432,6 +658,7 @@
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/src/components/api.vue">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="15">
@@ -443,12 +670,19 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="495">
           <caret line="106" column="31" selection-start-line="106" selection-start-column="20" selection-end-line="106" selection-end-column="31" />
+=======
+    <entry file="file://$PROJECT_DIR$/../thy-cms/application/index/controller/Api.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="495">
+          <caret line="106" column="31" lean-forward="false" selection-start-line="106" selection-start-column="20" selection-end-line="106" selection-end-column="31" />
+>>>>>>> 1e53cfb0eef179dac29b363cb650a34bb8811e65
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/../thy-cms/application/index/controller/Base.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="555">
+<<<<<<< HEAD
           <caret line="79" column="20" selection-start-line="79" selection-start-column="20" selection-end-line="79" selection-end-column="20" />
           <folding>
             <marker date="1558020251239" expanded="true" signature="271:317" ph="select * fro... thy_type" />
@@ -456,6 +690,9 @@
             <marker date="1558020251239" expanded="true" signature="755:801" ph="select * fro... thy_type" />
             <marker date="1558020251239" expanded="true" signature="852:900" ph="select * fro... thy_type" />
           </folding>
+=======
+          <caret line="79" column="20" lean-forward="false" selection-start-line="79" selection-start-column="20" selection-end-line="79" selection-end-column="20" />
+>>>>>>> 1e53cfb0eef179dac29b363cb650a34bb8811e65
         </state>
       </provider>
     </entry>
@@ -469,7 +706,11 @@
     <entry file="file://$PROJECT_DIR$/src/components/public/sidebar.vue">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="225">
+<<<<<<< HEAD
           <caret line="15" column="17" selection-start-line="15" selection-start-column="17" selection-end-line="15" selection-end-column="17" />
+=======
+          <caret line="15" column="17" lean-forward="false" selection-start-line="15" selection-start-column="17" selection-end-line="15" selection-end-column="17" />
+>>>>>>> 1e53cfb0eef179dac29b363cb650a34bb8811e65
         </state>
       </provider>
     </entry>
@@ -500,7 +741,39 @@
     <entry file="file://$PROJECT_DIR$/.babelrc">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
+<<<<<<< HEAD
           <caret line="4" column="18" selection-start-line="4" selection-start-column="18" selection-end-line="4" selection-end-column="18" />
+=======
+          <caret line="4" column="18" lean-forward="false" selection-start-line="4" selection-start-column="18" selection-end-line="4" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://F:/wechat/常州同捷机电有限公司/pages/index/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="18" lean-forward="false" selection-start-line="4" selection-start-column="18" selection-end-line="4" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://F:/wechat/常州同捷机电有限公司/pages/company/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" column="24" lean-forward="false" selection-start-line="8" selection-start-column="24" selection-end-line="8" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://F:/wechat/常州同捷机电有限公司/app.wxss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://F:/wechat/常州同捷机电有限公司/project.config.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-105">
+          <caret line="18" column="25" lean-forward="false" selection-start-line="18" selection-start-column="25" selection-end-line="18" selection-end-column="25" />
+>>>>>>> 1e53cfb0eef179dac29b363cb650a34bb8811e65
         </state>
       </provider>
     </entry>
@@ -514,29 +787,44 @@
     <entry file="file://$USER_HOME$/Desktop/新建文本文档.js" />
     <entry file="file://$PROJECT_DIR$/src/components/article/article_info.vue">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="204">
           <caret line="12" column="8" selection-start-line="12" selection-start-column="8" selection-end-line="12" selection-end-column="8" />
           <folding>
             <element signature="e#303#335#0" expanded="true" />
           </folding>
+=======
+        <state relative-caret-position="285">
+          <caret line="19" column="35" lean-forward="false" selection-start-line="19" selection-start-column="35" selection-end-line="19" selection-end-column="35" />
+>>>>>>> 1e53cfb0eef179dac29b363cb650a34bb8811e65
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/../thy-cms/application/index/view/public/tinymce.html">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="1751">
           <caret line="103" selection-start-line="103" selection-end-line="103" />
+=======
+        <state relative-caret-position="60">
+          <caret line="4" column="35" lean-forward="false" selection-start-line="4" selection-start-column="33" selection-end-line="4" selection-end-column="35" />
+>>>>>>> 1e53cfb0eef179dac29b363cb650a34bb8811e65
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/../thy-cms/application/index/view/article/index.html">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="394">
           <caret line="110" column="83" selection-start-line="110" selection-start-column="83" selection-end-line="110" selection-end-column="83" />
           <folding>
             <element signature="n#style#0;n#img#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#img#0;n#!!top" expanded="true" />
           </folding>
+=======
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+>>>>>>> 1e53cfb0eef179dac29b363cb650a34bb8811e65
         </state>
       </provider>
     </entry>
@@ -547,6 +835,7 @@
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/src/components/article/article_index.vue">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="521">
@@ -554,11 +843,20 @@
           <folding>
             <element signature="e#920#949#0" expanded="true" />
           </folding>
+=======
+    <entry file="file://$USER_HOME$/Desktop/新建文本文档.js" />
+    <entry file="file://$PROJECT_DIR$/../thy-cms/application/index/view/public/tinymce.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="122">
+          <caret line="103" column="24" lean-forward="false" selection-start-line="103" selection-start-column="24" selection-end-line="103" selection-end-column="24" />
+          <folding />
+>>>>>>> 1e53cfb0eef179dac29b363cb650a34bb8811e65
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main.js">
+    <entry file="file://$PROJECT_DIR$/webpack.pro.config.js">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state>
           <caret column="7" selection-start-column="7" selection-end-column="7" />
           <folding>
@@ -566,20 +864,33 @@
             <element signature="e#157#256#0" expanded="true" />
             <element signature="e#489#538#0" expanded="true" />
           </folding>
+=======
+        <state relative-caret-position="105">
+          <caret line="7" column="20" lean-forward="false" selection-start-line="7" selection-start-column="20" selection-end-line="7" selection-end-column="20" />
+          <folding />
+>>>>>>> 1e53cfb0eef179dac29b363cb650a34bb8811e65
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/article/article_list.vue">
+    <entry file="file://$PROJECT_DIR$/src/components/api.vue">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="357">
           <caret line="21" selection-start-line="21" selection-end-line="21" />
           <folding>
             <element signature="n#div#1;n#div#0;n#template#0;n#!!top" />
             <element signature="e#4893#5067#0" />
+=======
+        <state relative-caret-position="15">
+          <caret line="1" column="32" lean-forward="true" selection-start-line="1" selection-start-column="32" selection-end-line="1" selection-end-column="32" />
+          <folding>
+            <marker date="1561106575217" expanded="true" signature="974:980" ph="{&quot;get_category&quot;: get_category...}" />
+>>>>>>> 1e53cfb0eef179dac29b363cb650a34bb8811e65
           </folding>
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/src/app.vue">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
@@ -612,6 +923,123 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="556">
           <caret line="37" column="5" selection-start-line="37" selection-start-column="5" selection-end-line="37" selection-end-column="5" />
+=======
+    <entry file="file://$PROJECT_DIR$/src/main.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="23" column="15" lean-forward="false" selection-start-line="23" selection-start-column="15" selection-end-line="23" selection-end-column="15" />
+          <folding>
+            <element signature="e#0#22#0" expanded="true" />
+            <element signature="e#157#269#0" expanded="true" />
+            <element signature="e#520#569#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/webpack.dev.config.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="44" lean-forward="false" selection-start-line="7" selection-start-column="44" selection-end-line="7" selection-end-column="44" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" column="0" lean-forward="false" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="555">
+          <caret line="37" column="45" lean-forward="false" selection-start-line="37" selection-start-column="45" selection-end-line="37" selection-end-column="45" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/article/article_index.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1005">
+          <caret line="127" column="25" lean-forward="false" selection-start-line="127" selection-start-column="25" selection-end-line="127" selection-end-column="25" />
+          <folding>
+            <element signature="e#920#949#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/article/article_sidebar.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="51" column="28" lean-forward="false" selection-start-line="51" selection-start-column="28" selection-end-line="51" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/article/article_list.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="735">
+          <caret line="185" column="21" lean-forward="true" selection-start-line="182" selection-start-column="20" selection-end-line="185" selection-end-column="21" />
+          <folding>
+            <element signature="e#5170#5344#0" expanded="false" />
+            <element signature="e#5361#5554#0" expanded="false" />
+            <element signature="e#7003#7166#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/article/article_info.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" column="33" lean-forward="false" selection-start-line="10" selection-start-column="33" selection-end-line="10" selection-end-column="33" />
+          <folding>
+            <element signature="e#302#334#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/public/load_mask.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="690">
+          <caret line="46" column="33" lean-forward="false" selection-start-line="46" selection-start-column="33" selection-end-line="46" selection-end-column="33" />
+          <folding />
+>>>>>>> 1e53cfb0eef179dac29b363cb650a34bb8811e65
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/assets/css/base.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="406">
+          <caret line="291" column="0" lean-forward="true" selection-start-line="291" selection-start-column="0" selection-end-line="291" selection-end-column="0" />
+          <folding>
+            <element signature="e#367#1027#0" expanded="false" />
+            <element signature="e#1168#1234#0" expanded="false" />
+            <element signature="e#1257#1323#0" expanded="false" />
+            <element signature="e#1342#1429#0" expanded="false" />
+            <element signature="e#1460#1515#0" expanded="false" />
+            <element signature="e#1573#1902#0" expanded="false" />
+            <element signature="e#1939#2066#0" expanded="false" />
+            <element signature="e#2083#2266#0" expanded="false" />
+            <element signature="e#2283#2466#0" expanded="false" />
+            <element signature="e#2487#2645#0" expanded="false" />
+            <element signature="e#2667#2830#0" expanded="false" />
+            <element signature="e#2885#3163#0" expanded="false" />
+            <element signature="e#3203#3428#0" expanded="false" />
+            <element signature="e#3454#3566#0" expanded="false" />
+            <element signature="e#3589#3641#0" expanded="false" />
+            <element signature="e#3687#4106#0" expanded="false" />
+            <element signature="e#4155#4586#0" expanded="false" />
+            <element signature="e#4630#5421#0" expanded="false" />
+            <element signature="e#5446#5583#0" expanded="false" />
+            <element signature="e#5605#5677#0" expanded="false" />
+            <element signature="e#5714#5819#0" expanded="false" />
+            <element signature="e#5882#6676#0" expanded="false" />
+            <element signature="e#6698#6860#0" expanded="false" />
+            <element signature="e#6958#7018#0" expanded="false" />
+            <element signature="e#7040#7076#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>

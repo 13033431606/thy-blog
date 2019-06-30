@@ -7,7 +7,11 @@
     <orderEntry type="module" module-name="blog" />
     <orderEntry type="module" module-name="thinkphp5" />
     <orderEntry type="module" module-name="thinkphp5" />
-    <orderEntry type="module" module-name="通用基板" />
     <orderEntry type="module" module-name="thy-react" />
+    <orderEntry type="module" module-name="vue-cms" />
+    <orderEntry type="module" module-name="vue-cms" />
+    <orderEntry type="module" module-name="vue-cms" />
+    <orderEntry type="module" module-name="vue-element-admin" />
+    <orderEntry type="module" module-name="cms-api" />
   </component>
 </module>

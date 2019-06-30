@@ -33,7 +33,8 @@
     import article_list from "../article/article_list.vue";
     import article_sidebar from "../article/article_sidebar.vue";
     import article_search from "../article/article_search.vue";
-    const get_count=api.get_count;
+    const article_count=api.article_count;
+    const todo_count=api.todo_count;
 
     export default {
         name: "article_index",
@@ -48,15 +49,13 @@
         },
         created(){
             this.$axios({
-                url:get_count,
-                params:{id:0},
+                url:article_count,
                 method:"get"
             }).then((res)=>{
                 this.total_count=res.data.data;
             });
             this.$axios({
-                url:get_count,
-                params:{id:14},
+                url:todo_count,
                 method:"get"
             }).then((res)=>{
                 this.todo_count=res.data.data;

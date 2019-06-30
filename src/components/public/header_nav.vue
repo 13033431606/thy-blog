@@ -9,9 +9,9 @@
                 <router-link tag="li" :to="{name:'article'}" :class="{header_router_active : $route.meta.title == 'article'}">
                     Article
                 </router-link>
-                <router-link tag="li" :to="{name:'index'}" :class="{header_router_active : $route.meta.title == 'index'}">
-                    Demo
-                </router-link>
+                <li @click="link_to_admin">
+                    Admin
+                </li>
                 <!--<router-link tag="li" :to="{name:'article_info',params:{id:271}}" :class="{header_router_active : $route.meta.title == 'library'}">-->
                     <!--Img Library-->
                 <!--</router-link>-->
@@ -22,7 +22,12 @@
 
 <script>
     export default {
-        name: "header_nav"
+        name: "header_nav",
+        methods:{
+            link_to_admin(){
+                window.open("http://admin.thy-blog.com");
+            }
+        }
     }
     var header_nav=document.getElementsByClassName("header_nav");
     window.onscroll=function () {

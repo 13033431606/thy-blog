@@ -33,8 +33,15 @@
                 this.$axios({
                     url:get_news,
                 }).then(res => {
-                    this.news=res.data.news;
-                    this.loading=false;
+                    //获取新闻json中,有时会有换行符和空格出现,导致json格式错误,因此作如下处理
+                    if(typeof res.data == "object"){
+                        this.news=res.data.news;
+                        this.loading=false;
+                    }else{
+                        this.news=JSON.parse(res.data.replace(/\s+/g,'')).news;
+                        this.loading=false;
+                    }
+
                 })
             },
             link_to(url){

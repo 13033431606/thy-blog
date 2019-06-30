@@ -26,8 +26,8 @@ Vue.use(Loading);
 
 Vue.prototype.$axios=axios;
 
-
 Vue.use(VueRouter);
+
 
 import index from "./components/index/index.vue";
 import article_info from "./components/article/article_info.vue";
@@ -39,15 +39,7 @@ const router = new VueRouter({
         {name: "index",path: "/index",component: index,meta:{title:"index"}},
         {name: "article",path: "/article", component: article_index,meta:{title: "article"}},
         {name: "article_info",path: "/article_info/:id",component: article_info,meta:{title:"article"}}
-    ],
-    scrollBehavior (to, from, savedPosition) {
-        if (savedPosition) {
-            return savedPosition;
-
-        } else {
-            return;
-        }
-    },
+    ]
 });
 
 

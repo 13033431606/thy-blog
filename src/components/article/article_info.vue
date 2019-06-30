@@ -18,7 +18,7 @@
             hljs.highlightBlock(el)
         })
     }
-    const get_article=api.get_article;
+    const get_article=api.get_single_article;
     export default {
         name: "article_info",
         data(){
@@ -49,7 +49,7 @@
                     method:"get",
                     params:{id:id}
                 }).then((res)=>{
-                    this.article=res.data.data[0];
+                    this.article=res.data.data;
                     var that=this;
                     setTimeout(function () {
                         that.$root.mask="mask_off";

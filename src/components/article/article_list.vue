@@ -18,7 +18,7 @@
             <div class="pic">
                 <!--使用三元判断会造成vue-loader误判为绝对路径而不进行解析,固采用v-if,else的方法-->
                 <!--<img :src="item.img1?uploads_url+'/'+item.img1:'../../assets/img/banner1.jpg'" :alt="item.title" class="need_cover">-->
-                <img v-if="item.img1" :src="uploads_url+'/'+item.img1" :alt="item.title" class="need_cover">
+                <img v-if="item.img" :src="uploads_url+'/'+item.img.split(',')[0]" :alt="item.title" class="need_cover">
                 <img v-else src="../../assets/img/banner1.jpg" :alt="item.title" class="need_cover">
             </div>
             <div class="word">
@@ -44,9 +44,9 @@
 
 <script>
     import api from "../api.vue";
-    const get_article=api.get_category;
-    const get_typetree=api.get_typetree;
-    const uploads_url=api.uploads_url;
+    const get_article=api.article_index;
+    const get_typetree=api.type_tree;
+    const uploads_url=api.formal_path;
     export default {
         name: "article_list",
         data(){
@@ -63,9 +63,9 @@
                 types:[],//分类树
                 loading:true,
                 default_params: {
-                    label: 'name',
+                    label: 'title',
                     value: 'id',
-                    children: 'children',
+                    children: 'son',
                     expandTrigger: 'hover',
                     checkStrictly: true
                 }
@@ -73,7 +73,7 @@
         },
         created(){
             this.get_article(localStorage.value?localStorage.value.split(','):0);
-            this.get_typetree(13);
+            this.get_typetree(1);
         },
         methods:{
             //获取文章列表
@@ -81,6 +81,7 @@
                 if(typeof this.value == "object"){
                     id=this.value[this.value.length -1]
                 }
+                this.loading=true;
                 this.$axios({
                     url:get_article,
                     params:{
@@ -102,6 +103,7 @@
             },
             //获取分类信息
             get_typetree(id){
+                this.loading=true;
                 this.$axios({
                     url:get_typetree,
                     params:{
@@ -109,7 +111,8 @@
                     },
                     method:"get"
                 }).then((res)=>{
-                    this.types=res.data;
+                    this.types=res.data.data;
+                    this.loading=false;
                 })
             },
             //element组件相关
@@ -123,11 +126,6 @@
                 localStorage.current_page=this.current_page=1;//下拉选择后重置页面页码
                 localStorage.value=this.value;
                 this.get_article(this.value,this.current_page,this.page_size)
-            }
-        },
-        watch:{
-            value(){
-                console.log(this.value)
             }
         }
     }

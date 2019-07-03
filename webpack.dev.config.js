@@ -63,6 +63,11 @@ module.exports={
             }
         ]
     },
+    resolve: {
+        alias: {
+            '@': path.resolve(__dirname+"/src"),
+        }
+    },
     plugins:[
         new VueLoaderPlugin(),//热更新插件
         // new webpack.HotModuleReplacementPlugin()

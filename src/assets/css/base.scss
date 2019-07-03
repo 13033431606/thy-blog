@@ -300,7 +300,20 @@ html{
   overflow-x: hidden;
   width: 100%;
 }
+/*动画区域*/
+.fade_y-enter{
+  @include Y(50px);
+  opacity: 0;
+}
+.fade_y-enter-active{
+  @include transition(0.5s);
+}
 
-
-
+.fade_y-leave-active{
+  @include transition(0.5s);
+}
+.fade_y-leave-to{
+  @include Y(50px);
+  opacity: 0;
+}
 

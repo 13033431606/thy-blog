@@ -1,5 +1,5 @@
 <template>
-    <div class="article_info needScrollSmall">
+    <div class="article_info needScrollSmall" v-loading="loading">
         <main>
             <div class="title">{{article.title}}</div>
             <div class="content info_content" v-html="article.content"></div>
@@ -24,6 +24,7 @@
         data(){
             return{
                 article:'',
+                loading:true
             }
         },
         created(){
@@ -44,11 +45,13 @@
         },
         methods:{
             get_article_data(id){
+                this.loading=true;
                 this.$axios({
                     url:get_article,
                     method:"get",
                     params:{id:id}
                 }).then((res)=>{
+                    this.loading=false;
                     this.article=res.data.data;
                     var that=this;
                     setTimeout(function () {

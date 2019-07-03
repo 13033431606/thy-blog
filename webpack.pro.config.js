@@ -10,7 +10,7 @@ module.exports={
     entry:__dirname+"/src/main.js",
     output:{
         path:path.resolve(__dirname+"/public"),
-        publicPath: "/public/",
+        // publicPath: "/public/",
         filename: "index.js"
     },
     devServer: {
@@ -18,6 +18,11 @@ module.exports={
         port:'7080',
         inline:true,
         hot:true
+    },
+    resolve: {
+        alias: {
+            '@': path.resolve(__dirname+"/src"),
+        }
     },
     module: {
         rules: [
@@ -32,8 +37,8 @@ module.exports={
                 test: /\.scss$/,
                 use: [
                     { loader: 'vue-style-loader' },
-                    { loader: 'css-loader', options: { sourceMap: true } },
-                    { loader: 'sass-loader', options: { sourceMap: true } },
+                    { loader: 'css-loader', options: { sourceMap: false } },
+                    { loader: 'sass-loader', options: { sourceMap: false } },
                     { loader: 'sass-resources-loader',
                         options: {
                             sourceMap: false,

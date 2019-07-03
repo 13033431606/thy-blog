@@ -3,8 +3,12 @@
         <header_nav></header_nav>
         <background></background>
         <load_mask></load_mask>
-        <transition name="fade" mode="out-in">
-            <router-view></router-view>
+
+        <transition name="fade_y" mode="out-in">
+            <keep-alive include="article_list">
+                <router-view></router-view>
+            </keep-alive>
+
         </transition>
     </div>
 </template>

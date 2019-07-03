@@ -14,9 +14,6 @@
     const todo_count= base_url+"/api/todo_count";
     const article_count= base_url+"/api/article_count";
 
-
-
-
     //category
     const get_single_category= base_url+ "/category/get_single_category";//id
 

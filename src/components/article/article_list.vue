@@ -11,33 +11,35 @@
                     :props="default_params">
             </el-cascader>
         </div>
-        <div class="no_data" v-show="!articles.data || articles.data.length == 0">
-            暂无文章信息
-        </div>
-        <li v-for="item in articles.data" v-loading="loading">
-            <div class="pic">
-                <!--使用三元判断会造成vue-loader误判为绝对路径而不进行解析,固采用v-if,else的方法-->
-                <!--<img :src="item.img1?uploads_url+'/'+item.img1:'../../assets/img/banner1.jpg'" :alt="item.title" class="need_cover">-->
-                <img v-if="item.img" :src="uploads_url+'/'+item.img.split(',')[0]" :alt="item.title" class="need_cover">
-                <img v-else src="../../assets/img/banner1.jpg" :alt="item.title" class="need_cover">
+        <div  v-loading="loading">
+            <div class="no_data" v-show="!articles.data || articles.data.length == 0">
+                暂无文章信息
             </div>
-            <div class="word">
-                <router-link tag="a" :to="{name:'article_info',params:{id:item.id}}">
-                    <div class="title">{{item.title}}</div>
-                </router-link>
-                <div class="des">{{item.description}}</div>
-                <div class="time">{{item.time}}</div>
+            <li v-for="item in articles.data">
+                <div class="pic">
+                    <!--使用三元判断会造成vue-loader误判为绝对路径而不进行解析,固采用v-if,else的方法-->
+                    <!--<img :src="item.img1?uploads_url+'/'+item.img1:'../../assets/img/banner1.jpg'" :alt="item.title" class="need_cover">-->
+                    <img v-if="item.img" :src="uploads_url+'/'+item.img.split(',')[0]" :alt="item.title" class="need_cover">
+                    <img v-else src="../../assets/img/banner1.jpg" :alt="item.title" class="need_cover">
+                </div>
+                <div class="word">
+                    <router-link tag="a" :to="{name:'article_info',params:{id:item.id}}">
+                        <div class="title">{{item.title}}</div>
+                    </router-link>
+                    <div class="des">{{item.description}}</div>
+                    <div class="time">{{item.time}}</div>
+                </div>
+            </li>
+            <div class="page">
+                <el-pagination
+                        background
+                        @current-change="current_page_change()"
+                        :current-page.sync="current_page"
+                        :page-size="page_size"
+                        layout="total, prev, pager, next, jumper"
+                        :total="count">
+                </el-pagination>
             </div>
-        </li>
-        <div class="page">
-            <el-pagination
-                    background
-                    @current-change="current_page_change()"
-                    :current-page.sync="current_page"
-                    :page-size="page_size"
-                    layout="total, prev, pager, next, jumper"
-                    :total="count">
-            </el-pagination>
         </div>
     </div>
 </template>
